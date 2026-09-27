@@ -49,6 +49,7 @@ p.add_argument('--smoke',action='store_true')
 p.add_argument('--ppo-diagnostics',action='store_true')
 p.add_argument('--desired-kl',type=float,default=.02)
 p.add_argument('--eval-only',action='store_true')
+p.add_argument('--no-render',action='store_true',help='Skip video rendering; retain evaluation metrics and recorded states')
 p.add_argument('--eval-reference-start',action='store_true',help='Diagnostic eval-only initialization from the reference bank; not an upright-start test')
 p.add_argument('--stochastic-eval',action='store_true')
 p.add_argument('--mean-excitation-eval',action='store_true')
@@ -586,7 +587,8 @@ def main():
             if not a.resume:raise ValueError('--eval-only requires --resume')
             result,folder=env.evaluate(actor,'evaluation',a.eval_seconds,support=a.eval_support,root_strength=a.eval_root_assistance)
             print('EVALUATION',json.dumps(result),flush=True)
-            subprocess.run([str(ROOT/'.venv/bin/python'),str(Path(__file__).with_name('render_velocity.py')),str(folder)],env={**os.environ,'MUJOCO_GL':'egl'},check=True)
+            if not a.no_render:
+                subprocess.run([str(ROOT/'.venv/bin/python'),str(Path(__file__).with_name('render_velocity.py')),str(folder)],env={**os.environ,'MUJOCO_GL':'egl'},check=True)
             return
         writer=SummaryWriter(str(a.run_dir/'tensorboard'));start=time.monotonic();last_eval=start;last_save=start;last_video=start;eval_count=0
         def save(it,name):
@@ -595,6 +597,7 @@ def main():
                 state.update(action_basis=env.action_transform.basis.detach().cpu(),baseline_actor_state_dict=env.baseline_actor.state_dict())
             tmp=a.run_dir/(name+'.tmp');torch.save(state,tmp);tmp.replace(a.run_dir/name)
         def render(folder):
+            if a.no_render:return
             with (folder/'render.log').open('w') as log:
                 subprocess.Popen([str(ROOT/'.venv/bin/python'),str(Path(__file__).with_name('render_velocity.py')),str(folder)],env={**os.environ,'MUJOCO_GL':'egl'},stdout=log,stderr=subprocess.STDOUT)
         print('READY',json.dumps({'n':env.n,'obs':obs['policy'].shape[1],'actions':env.num_actions}),flush=True)

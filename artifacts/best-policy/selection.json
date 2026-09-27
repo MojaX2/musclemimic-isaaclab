@@ -1,0 +1,7 @@
+{
+  "checkpoint": "run_025/model_5716.pt",
+  "criterion": "Among recorded zero-external-force evaluations with survival >= 0.97 for each of commands 0,0.4,0.8,1.2 m/s, minimize equally weighted mean velocity MAE. Post-hoc selection, not held-out/multiseed validation.",
+  "mean_velocity_mae": 0.15954186767339706,
+  "minimum_survival": 0.9765625,
+  "original_checkpoint_sha256": "f3f2339229791913a8c5d8649ef1c859a714de13467c5c5dedd91e4acab987a8"
+}

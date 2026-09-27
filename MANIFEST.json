@@ -1,11 +1,11 @@
 {
   "upstream_commit": "5d4c8af12784f44bd2bb276e71db9cda6c9712fc",
-  "description": "Experimental source snapshot, run_026 completed at iteration 6716",
+  "description": "Experiment snapshot with selected run_025/5716 checkpoint and inference artifacts",
   "files": [
     {
       "path": ".gitignore",
-      "sha256": "7f4709069b1a829e6d33b1e04df38b851b860744d7f0d90fbee09a3258c39e40",
-      "bytes": 73
+      "sha256": "507a3f510b18c4eaa8e44ea31dfd2a1ada97cbf0a0ac822768d9099a4eeee45e",
+      "bytes": 177
     },
     {
       "path": "LICENSE",
@@ -14,13 +14,73 @@
     },
     {
       "path": "README.md",
-      "sha256": "a62c1070ac8d05b6fbf3e0c1e1f4a5e838597299b83e510bb9377a88f5f2d419",
-      "bytes": 8603
+      "sha256": "d6157fc6d6f83e88f4a07e96eb692c5d6c85484fba32d4b001bc24399bf3207b",
+      "bytes": 8917
     },
     {
       "path": "RESULTS.md",
       "sha256": "b40579616d24987e5e595e155a0f970da194415a929e50f8cd2d80e43eb78eab",
       "bytes": 1355
+    },
+    {
+      "path": "artifacts/best-policy/README.md",
+      "sha256": "8f5d7fbeee765828b648f3bfb7564b0333b0f125ff103dd5280eda1062e57c8a",
+      "bytes": 3665
+    },
+    {
+      "path": "artifacts/best-policy/checkpoint.pt",
+      "sha256": "f3f2339229791913a8c5d8649ef1c859a714de13467c5c5dedd91e4acab987a8",
+      "bytes": 16836471
+    },
+    {
+      "path": "artifacts/best-policy/evaluate.py",
+      "sha256": "037ca20a4cb80229ad9a2eda0ebe65ccf427ec20abb5d166f7da29f3ec210236",
+      "bytes": 2112
+    },
+    {
+      "path": "artifacts/best-policy/foot_motion.json",
+      "sha256": "ecc34938545fed176deb7d1fe639341c036eaed4c548b591d2cac1178398b2dd",
+      "bytes": 6546
+    },
+    {
+      "path": "artifacts/best-policy/initial.npz",
+      "sha256": "0588c3f601ecc5b0d02acb3a14679b6805143a5ade67cab6d500c18f8ee15ca6",
+      "bytes": 131950
+    },
+    {
+      "path": "artifacts/best-policy/metrics.json",
+      "sha256": "08dddba2d6c13f936fefa4ae21fd717c16abfcb83727d14e45c8927726902748",
+      "bytes": 1679
+    },
+    {
+      "path": "artifacts/best-policy/model.xml.template",
+      "sha256": "c05267647fb4db678875accdff10b8d1e6acc95027904285879295ca919a88fc",
+      "bytes": 521017
+    },
+    {
+      "path": "artifacts/best-policy/rollout.npz",
+      "sha256": "022fc0a8ed8558de74c8f72c108f87bd67c8e254b89616e21b0b1ce10e8bfd5d",
+      "bytes": 859739
+    },
+    {
+      "path": "artifacts/best-policy/selection.json",
+      "sha256": "8c57480b36d41c6a627db530a083769e8cc734a6f54102f27d2793e281f150ef",
+      "bytes": 448
+    },
+    {
+      "path": "artifacts/best-policy/smoke_validation.json",
+      "sha256": "6695c43bc75f0d30199514030ef8e10ca5c6b2cf8f36ceaa4e54d08407a146a9",
+      "bytes": 1954
+    },
+    {
+      "path": "artifacts/best-policy/training_config.json",
+      "sha256": "42672ab975b601aac4ddfad2b765a5831a0135b3e4815f118171fbdb9461015f",
+      "bytes": 1795
+    },
+    {
+      "path": "artifacts/best-policy/walking.gif",
+      "sha256": "b9abc777d0458e10bdef90747cafeb572523470fe6d2537540b56628e6740cb3",
+      "bytes": 1341720
     },
     {
       "path": "examples/isaaclab_newton_fullbody/EXPERIMENT_STATUS.md",
@@ -294,8 +354,8 @@
     },
     {
       "path": "examples/isaaclab_newton_fullbody/train_velocity_curriculum.py",
-      "sha256": "03ca908f3678933358db5eafaaac655d3de7e40af630e37b6eb61a7a37410b64",
-      "bytes": 56742
+      "sha256": "ae1eaa96a6a07b233bd0962993238afc0188ede12417b6e713eeaf3dd96738ba",
+      "bytes": 56937
     },
     {
       "path": "examples/isaaclab_newton_fullbody/train_velocity_g1.py",

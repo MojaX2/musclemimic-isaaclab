@@ -7,3 +7,7 @@ outputs/
 *.mp4
 *.log
 .pytest_cache/
+
+# Deliberately versioned evaluation artifacts
+!artifacts/best-policy/*.pt
+!artifacts/best-policy/*.npz

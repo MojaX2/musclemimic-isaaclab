@@ -1,0 +1,43 @@
+{
+  "baseline": {
+    "control_steps": 700,
+    "episode_termination_seconds": [
+      2.01,
+      2.01,
+      2.01
+    ],
+    "min_root_height_m": 0.2697994585678214
+  },
+  "isaaclab": {
+    "control_steps": 700,
+    "episode_termination_seconds": [
+      2.14,
+      2.14,
+      2.14
+    ],
+    "min_root_height_m": 0.37668389081954956
+  },
+  "model": {
+    "nq": 89,
+    "nv": 88,
+    "nu": 354,
+    "integrator": 0,
+    "timestep": 0.002,
+    "observation_dim": 2418
+  },
+  "gpu_checks": {
+    "steps": 700,
+    "overflow": []
+  },
+  "stable_walking": false,
+  "original_mjx": {
+    "control_steps": 300,
+    "nconmax": 1024,
+    "root_height_at_2_seconds_m": 0.407087,
+    "reset_observed_between_control_steps": [
+      200,
+      250
+    ],
+    "stable_walking": false
+  }
+}

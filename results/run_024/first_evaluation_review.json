@@ -1,0 +1,50 @@
+{
+  "reviewed_at": "2026-09-27T04:36:34.796776+00:00",
+  "parent": {
+    "0.0": {
+      "survival": 0.6826171875,
+      "mean_seconds": 17.23305892944336,
+      "velocity_mae": 0.4579872786998749
+    },
+    "0.4": {
+      "survival": 0.99609375,
+      "mean_seconds": 19.936594009399414,
+      "velocity_mae": 0.44345623254776
+    },
+    "0.8": {
+      "survival": 0.9970703125,
+      "mean_seconds": 19.948801040649414,
+      "velocity_mae": 0.2010951042175293
+    },
+    "1.2": {
+      "survival": 0.998046875,
+      "mean_seconds": 19.96661376953125,
+      "velocity_mae": 0.19108372926712036
+    }
+  },
+  "current": {
+    "0.0": {
+      "survival": 0.5703125,
+      "mean_seconds": 16.57501983642578,
+      "velocity_mae": 0.46815767884254456
+    },
+    "0.4": {
+      "survival": 0.984375,
+      "mean_seconds": 19.702098846435547,
+      "velocity_mae": 0.4320756793022156
+    },
+    "0.8": {
+      "survival": 0.9892578125,
+      "mean_seconds": 19.79389762878418,
+      "velocity_mae": 0.19179663062095642
+    },
+    "1.2": {
+      "survival": 0.9931640625,
+      "mean_seconds": 19.900264739990234,
+      "velocity_mae": 0.2011304497718811
+    }
+  },
+  "decision": "Continue unchanged to hourly evaluation. 73 additional updates only; moving survival remains >=98.4%, low-speed MAE changed only .443 to .432, stop survival worsened .683 to .570. No convincing low-speed benefit yet; watch stop and trunk-fold deterioration.",
+  "goal_achieved": false,
+  "external_force_max": 0.0
+}

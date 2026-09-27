@@ -1,0 +1,50 @@
+{
+  "reviewed_at": "2026-09-27T03:11:50.361594+00:00",
+  "parent": {
+    "0.0": {
+      "survival": 0.0,
+      "mean_seconds": 4.915822982788086,
+      "velocity_mae": 0.6797370314598083
+    },
+    "0.4": {
+      "survival": 0.8642578125,
+      "mean_seconds": 18.455297470092773,
+      "velocity_mae": 0.42215028405189514
+    },
+    "0.8": {
+      "survival": 0.9794921875,
+      "mean_seconds": 19.68840789794922,
+      "velocity_mae": 0.21386082470417023
+    },
+    "1.2": {
+      "survival": 0.9599609375,
+      "mean_seconds": 19.395042419433594,
+      "velocity_mae": 0.2058430016040802
+    }
+  },
+  "current": {
+    "0.0": {
+      "survival": 0.4130859375,
+      "mean_seconds": 13.677116394042969,
+      "velocity_mae": 0.8550941944122314
+    },
+    "0.4": {
+      "survival": 0.888671875,
+      "mean_seconds": 18.37055015563965,
+      "velocity_mae": 0.5772175192832947
+    },
+    "0.8": {
+      "survival": 0.9833984375,
+      "mean_seconds": 19.74553680419922,
+      "velocity_mae": 0.26725971698760986
+    },
+    "1.2": {
+      "survival": 0.9658203125,
+      "mean_seconds": 19.495609283447266,
+      "velocity_mae": 0.19913768768310547
+    }
+  },
+  "decision": "Continue unchanged to hourly evaluation. Only 69 updates since parent; moving-command survival retained, stop survival improved but stop MAE worsened, so stopping is not learned. Low-speed tracking also worsened. Do not count survival as speed-following success.",
+  "external_force_max": 0.0,
+  "goal_achieved": false
+}

@@ -1,0 +1,50 @@
+{
+  "reviewed_at": "2026-09-27T04:14:30.961175+00:00",
+  "previous": {
+    "0.0": {
+      "survival": 0.4130859375,
+      "mean_seconds": 13.677116394042969,
+      "velocity_mae": 0.8550941944122314
+    },
+    "0.4": {
+      "survival": 0.888671875,
+      "mean_seconds": 18.37055015563965,
+      "velocity_mae": 0.5772175192832947
+    },
+    "0.8": {
+      "survival": 0.9833984375,
+      "mean_seconds": 19.74553680419922,
+      "velocity_mae": 0.26725971698760986
+    },
+    "1.2": {
+      "survival": 0.9658203125,
+      "mean_seconds": 19.495609283447266,
+      "velocity_mae": 0.19913768768310547
+    }
+  },
+  "current": {
+    "0.0": {
+      "survival": 0.353515625,
+      "mean_seconds": 14.399288177490234,
+      "velocity_mae": 0.4635857939720154
+    },
+    "0.4": {
+      "survival": 0.99609375,
+      "mean_seconds": 19.93760871887207,
+      "velocity_mae": 0.47225385904312134
+    },
+    "0.8": {
+      "survival": 0.998046875,
+      "mean_seconds": 19.96661376953125,
+      "velocity_mae": 0.20583581924438477
+    },
+    "1.2": {
+      "survival": 0.9814453125,
+      "mean_seconds": 19.69731330871582,
+      "velocity_mae": 0.19521985948085785
+    }
+  },
+  "decision": "Continue unchanged to planned endpoint iteration 3840. Moving-command survival improved strongly; low-speed MAE remains large and stop is not learned. If endpoint confirms plateau, test guidance/tracking weight balance rather than treating survival as success.",
+  "external_force_max": 0.0,
+  "goal_achieved": false
+}

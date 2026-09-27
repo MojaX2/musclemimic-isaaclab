@@ -1,0 +1,65 @@
+{
+  "iteration": 4790,
+  "updates_since_parent": 74,
+  "commands": {
+    "0.0": {
+      "survival": 0.9609375,
+      "mean_seconds": 19.677993774414062,
+      "velocity_mae": 0.08098620921373367
+    },
+    "0.4": {
+      "survival": 0.9970703125,
+      "mean_seconds": 19.950557708740234,
+      "velocity_mae": 0.24891452491283417
+    },
+    "0.8": {
+      "survival": 0.9990234375,
+      "mean_seconds": 19.983196258544922,
+      "velocity_mae": 0.12445507198572159
+    },
+    "1.2": {
+      "survival": 0.9970703125,
+      "mean_seconds": 19.95050048828125,
+      "velocity_mae": 0.17910224199295044
+    }
+  },
+  "parent_commands": {
+    "0.0": {
+      "survival": 0.87109375,
+      "mean_seconds": 18.5626220703125,
+      "velocity_mae": 0.14325273036956787
+    },
+    "0.4": {
+      "survival": 0.9990234375,
+      "mean_seconds": 19.98390007019043,
+      "velocity_mae": 0.2849784195423126
+    },
+    "0.8": {
+      "survival": 1.0,
+      "mean_seconds": 20.000267028808594,
+      "velocity_mae": 0.13226154446601868
+    },
+    "1.2": {
+      "survival": 0.998046875,
+      "mean_seconds": 19.968528747558594,
+      "velocity_mae": 0.17209704220294952
+    }
+  },
+  "external_force_check": {
+    "expected_upward_N": 0.0,
+    "max_sum_error_N": 0.0,
+    "max_external_wrench_component": 0.0,
+    "max_other_component": 0.0
+  },
+  "decision": "Continue unchanged to hourly evaluation: stop survival improved 0.871 to 0.961 and stop MAE 0.143 to 0.081. Slow-speed MAE improved 0.285 to 0.249. Moving survival remains above 0.997. Goal unproven: 20-second constant commands only, low-speed error remains high and no command transitions tested.",
+  "goal_achieved": false,
+  "representative_video": {
+    "seconds": 20.0,
+    "reset_count": 0,
+    "recorded_command_mean_mps": 0.4000000059604645,
+    "recorded_velocity_mean_mps": 0.6409930627942085,
+    "recorded_velocity_mae_mps": 0.25874671202898025,
+    "longest_alternating_landing_chain": 35
+  },
+  "visual_check": "Inspected saved 12-second frame: upright trunk, no reset, stepping posture. Full rollout statistics show zero resets; mean speed still exceeds 0.4 m/s command. Single frame alone does not establish whole-video gait quality."
+}

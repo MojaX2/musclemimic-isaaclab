@@ -1,0 +1,54 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "versions": {
+    "mjlab": "1.6.0",
+    "mujoco": "3.11.0",
+    "mujoco-warp": "3.11.0",
+    "torch": "2.12.0+cu130",
+    "warp-lang": "1.17.0"
+  },
+  "models": {
+    "bimanual": {
+      "status": "PASS",
+      "num_envs": 4,
+      "muscles": 126,
+      "steps_per_env": 1000,
+      "simulated_seconds_per_env": 1.0,
+      "gpu_state_device": "cuda:0",
+      "cuda_graph": true,
+      "build_seconds": 32.438404724001884,
+      "rollout_wall_seconds": 0.8003804030013271,
+      "finite_states": true,
+      "control_mapping_verified": true,
+      "activation_range": [
+        0.003078891197219491,
+        0.529181957244873
+      ],
+      "max_abs_actuator_force": 773.0032958984375,
+      "max_abs_qpos_change": 1.6150695085525513,
+      "selective_reset_verified": true,
+      "warning_data": null
+    },
+    "fullbody": {
+      "status": "PASS",
+      "num_envs": 4,
+      "muscles": 416,
+      "steps_per_env": 1000,
+      "simulated_seconds_per_env": 1.0,
+      "gpu_state_device": "cuda:0",
+      "cuda_graph": true,
+      "build_seconds": 16.582275021006353,
+      "rollout_wall_seconds": 2.107821939047426,
+      "finite_states": true,
+      "control_mapping_verified": true,
+      "activation_range": [
+        0.002341745188459754,
+        0.5245285034179688
+      ],
+      "max_abs_actuator_force": 2054.053466796875,
+      "max_abs_qpos_change": 1.9860799312591553,
+      "selective_reset_verified": true,
+      "warning_data": null
+    }
+  }
+}

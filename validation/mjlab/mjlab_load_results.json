@@ -1,0 +1,88 @@
+{
+  "versions": {
+    "mjlab": "1.6.0",
+    "mujoco": "3.11.0",
+    "mujoco-warp": "3.11.0",
+    "torch": "2.12.0+cu130"
+  },
+  "models": {
+    "bimanual": {
+      "status": "PASS",
+      "counts": {
+        "nbody": 78,
+        "njnt": 76,
+        "nq": 76,
+        "nv": 76,
+        "nu": 126,
+        "na": 126,
+        "ntendon": 134,
+        "neq": 22
+      },
+      "muscle_dyntypes": {
+        "4": 126
+      },
+      "exact_match_fields": [
+        "actuator_dyntype",
+        "actuator_gaintype",
+        "actuator_biastype",
+        "actuator_dynprm",
+        "actuator_gainprm",
+        "actuator_biasprm",
+        "actuator_lengthrange",
+        "actuator_ctrlrange",
+        "actuator_trnid",
+        "tendon_adr",
+        "tendon_num",
+        "wrap_type",
+        "wrap_objid",
+        "wrap_prm",
+        "eq_type",
+        "eq_obj1id",
+        "eq_obj2id",
+        "eq_data"
+      ],
+      "actuator_order_preserved": true,
+      "command_field": "effort",
+      "forward_force_finite": true
+    },
+    "fullbody": {
+      "status": "PASS",
+      "counts": {
+        "nbody": 102,
+        "njnt": 123,
+        "nq": 129,
+        "nv": 128,
+        "nu": 416,
+        "na": 416,
+        "ntendon": 424,
+        "neq": 51
+      },
+      "muscle_dyntypes": {
+        "4": 416
+      },
+      "exact_match_fields": [
+        "actuator_dyntype",
+        "actuator_gaintype",
+        "actuator_biastype",
+        "actuator_dynprm",
+        "actuator_gainprm",
+        "actuator_biasprm",
+        "actuator_lengthrange",
+        "actuator_ctrlrange",
+        "actuator_trnid",
+        "tendon_adr",
+        "tendon_num",
+        "wrap_type",
+        "wrap_objid",
+        "wrap_prm",
+        "eq_type",
+        "eq_obj1id",
+        "eq_obj2id",
+        "eq_data"
+      ],
+      "actuator_order_preserved": true,
+      "command_field": "effort",
+      "forward_force_finite": true
+    }
+  }
+}

@@ -1,0 +1,89 @@
+{
+  "evaluation_iteration": 4715,
+  "trigger": "User requested current walking video; near hourly evaluation",
+  "commands": {
+    "0.0": {
+      "survival": 0.8095703125,
+      "mean_seconds": 17.997512817382812,
+      "velocity_mae": 0.13071337342262268
+    },
+    "0.4": {
+      "survival": 0.998046875,
+      "mean_seconds": 19.96630096435547,
+      "velocity_mae": 0.28432023525238037
+    },
+    "0.8": {
+      "survival": 1.0,
+      "mean_seconds": 20.000267028808594,
+      "velocity_mae": 0.1362917721271515
+    },
+    "1.2": {
+      "survival": 0.9951171875,
+      "mean_seconds": 19.915245056152344,
+      "velocity_mae": 0.1708686351776123
+    }
+  },
+  "changes_from_parent": {
+    "0.0": {
+      "velocity_mae_delta": -0.3272739052772522,
+      "survival_delta": 0.126953125
+    },
+    "0.4": {
+      "velocity_mae_delta": -0.15913599729537964,
+      "survival_delta": 0.001953125
+    },
+    "0.8": {
+      "velocity_mae_delta": -0.06480333209037781,
+      "survival_delta": 0.0029296875
+    },
+    "1.2": {
+      "velocity_mae_delta": -0.020215094089508057,
+      "survival_delta": -0.0029296875
+    }
+  },
+  "external_force_check": {
+    "expected_upward_N": 0.0,
+    "max_sum_error_N": 0.0,
+    "max_external_wrench_component": 0.0,
+    "max_other_component": 0.0
+  },
+  "decision": "Continue unchanged to planned endpoint 4840. Tracking improved at all tested commands; 0.4 m/s tracking and stop survival remain insufficient. Select continuation based on endpoint rather than launch a different reward experiment now.",
+  "limitations": [
+    "20 second constant-command evaluation only",
+    "No within-episode command transitions verified",
+    "Single seed and checkpoint comparison does not establish causal effect of reduced reference weight"
+  ],
+  "goal_achieved": false,
+  "adjacent_checkpoint_evaluation": {
+    "iteration": 4716,
+    "commands": {
+      "0.0": {
+        "survival": 0.87109375,
+        "mean_seconds": 18.5626220703125,
+        "velocity_mae": 0.14325273036956787
+      },
+      "0.4": {
+        "survival": 0.9990234375,
+        "mean_seconds": 19.98390007019043,
+        "velocity_mae": 0.2849784195423126
+      },
+      "0.8": {
+        "survival": 1.0,
+        "mean_seconds": 20.000267028808594,
+        "velocity_mae": 0.13226154446601868
+      },
+      "1.2": {
+        "survival": 0.998046875,
+        "mean_seconds": 19.968528747558594,
+        "velocity_mae": 0.17209704220294952
+      }
+    },
+    "interpretation": "Similar moving-command errors at adjacent checkpoint; not an independent seed replication. Stop survival varies from 0.810 to 0.871 and remains insufficient.",
+    "external_force_check": {
+      "expected_upward_N": 0.0,
+      "max_sum_error_N": 0.0,
+      "max_external_wrench_component": 0.0,
+      "max_other_component": 0.0
+    }
+  }
+}

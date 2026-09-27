@@ -1,0 +1,59 @@
+{
+  "label": "iter_002067",
+  "termination_version": "g1_muscle_v2_torso",
+  "minimum_head_gap_m": 0.3591039733904444,
+  "stochastic": true,
+  "mean_excitation": false,
+  "initial_phase": "random",
+  "initial_velocity_perturbation_std": 0.02,
+  "support": 0.0,
+  "commands": {
+    "0.0": {
+      "survival": 0.1083984375,
+      "mean_seconds": 7.7521209716796875,
+      "velocity_mae": 0.6356275081634521
+    },
+    "0.4": {
+      "survival": 0.693359375,
+      "mean_seconds": 15.094796180725098,
+      "velocity_mae": 0.5090920329093933
+    },
+    "0.8": {
+      "survival": 0.88671875,
+      "mean_seconds": 18.139202117919922,
+      "velocity_mae": 0.2930830717086792
+    },
+    "1.2": {
+      "survival": 0.916015625,
+      "mean_seconds": 18.59967803955078,
+      "velocity_mae": 0.2673102617263794
+    }
+  },
+  "initial_state": "upright",
+  "phase_harmonics": 4,
+  "solver_iterations": 20,
+  "root_assistance_strength": 0.0,
+  "root_controller_parameters": {
+    "weight_support": 0.3,
+    "vertical_limit": 0.6
+  },
+  "first_episode_gait": {
+    "qualified_landings_mean": 21.3740234375,
+    "longest_alternating_chain_mean": 19.9833984375,
+    "fraction_with_chain_at_least_4": 0.657958984375,
+    "failure_fractions": {
+      "low_pelvis": 0.177978515625,
+      "high_pelvis": 0.0,
+      "root_tilt": 0.184814453125,
+      "trunk_fold": 0.008544921875,
+      "nonfinite": 0.0
+    },
+    "note": "Force-contact touchdown criterion, before first termination; chain gap <=1.2s. Failure causes may overlap."
+  },
+  "external_force_check": {
+    "expected_upward_N": 0.0,
+    "max_sum_error_N": 0.0,
+    "max_external_wrench_component": 0.0,
+    "max_other_component": 0.0
+  }
+}

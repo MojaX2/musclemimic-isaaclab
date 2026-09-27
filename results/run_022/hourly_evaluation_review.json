@@ -1,0 +1,60 @@
+{
+  "reviewed_at": "2026-09-27T02:49:18.622109+00:00",
+  "comparison": {
+    "0.0": {
+      "previous": {
+        "survival": 0.1083984375,
+        "mean_seconds": 7.7521209716796875,
+        "velocity_mae": 0.6356275081634521
+      },
+      "current": {
+        "survival": 0.0,
+        "mean_seconds": 4.915822982788086,
+        "velocity_mae": 0.6797370314598083
+      }
+    },
+    "0.4": {
+      "previous": {
+        "survival": 0.693359375,
+        "mean_seconds": 15.094796180725098,
+        "velocity_mae": 0.5090920329093933
+      },
+      "current": {
+        "survival": 0.8642578125,
+        "mean_seconds": 18.455297470092773,
+        "velocity_mae": 0.42215028405189514
+      }
+    },
+    "0.8": {
+      "previous": {
+        "survival": 0.88671875,
+        "mean_seconds": 18.139202117919922,
+        "velocity_mae": 0.2930830717086792
+      },
+      "current": {
+        "survival": 0.9794921875,
+        "mean_seconds": 19.68840789794922,
+        "velocity_mae": 0.21386082470417023
+      }
+    },
+    "1.2": {
+      "previous": {
+        "survival": 0.916015625,
+        "mean_seconds": 18.59967803955078,
+        "velocity_mae": 0.2673102617263794
+      },
+      "current": {
+        "survival": 0.9599609375,
+        "mean_seconds": 19.395042419433594,
+        "velocity_mae": 0.2058430016040802
+      }
+    }
+  },
+  "external_force_check": {
+    "expected_upward_N": 0.0,
+    "max_sum_error_N": 0.0,
+    "max_external_wrench_component": 0.0,
+    "max_other_component": 0.0
+  },
+  "decision": "Continue unchanged to planned iteration 2999 endpoint. Improved upright survival and velocity MAE at moving commands; stopping fails and slow command remains too fast. Goal not achieved. Use endpoint evaluation to choose lower-speed curriculum; no next run launched yet."
+}

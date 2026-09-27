@@ -1,0 +1,82 @@
+{
+  "gpu": "NVIDIA GeForce RTX 5090",
+  "versions": {
+    "mjlab": "1.6.0",
+    "mujoco": "3.11.0",
+    "mujoco-warp": "3.11.0",
+    "torch": "2.12.0+cu130",
+    "warp-lang": "1.17.0"
+  },
+  "num_envs": 4096,
+  "nu": 416,
+  "nv": 128,
+  "ntendon": 424,
+  "dt": 0.002,
+  "decimation": 5,
+  "physics_steps_per_trial": 500,
+  "sim_seconds_per_env_per_trial": 1.0,
+  "build_seconds": 1.9561538220150396,
+  "solver": "Newton",
+  "iterations": 50,
+  "ls_iterations": 20,
+  "nconmax_per_world": 96,
+  "njmax": 768,
+  "trials": [
+    {
+      "elapsed_seconds": 15.556545530911535,
+      "physics_env_steps_per_second": 131648.76456219246,
+      "control_env_steps_per_second": 26329.752912438493,
+      "per_env_realtime_factor": 0.06428162332138304,
+      "all_finite": {
+        "qpos": true,
+        "qvel": true,
+        "act": true,
+        "actuator_force": true
+      },
+      "overflow_bitmask": 0,
+      "peak_constraints_per_world": 279,
+      "peak_contacts_all_worlds": 34172,
+      "time_min": 0.9999942183494568,
+      "time_max": 0.9999942183494568,
+      "max_abs_muscle_force": 2383.64892578125
+    },
+    {
+      "elapsed_seconds": 15.555940880905837,
+      "physics_env_steps_per_second": 131653.8816699812,
+      "control_env_steps_per_second": 26330.776333996237,
+      "per_env_realtime_factor": 0.0642841219091705,
+      "all_finite": {
+        "qpos": true,
+        "qvel": true,
+        "act": true,
+        "actuator_force": true
+      },
+      "overflow_bitmask": 0,
+      "peak_constraints_per_world": 287,
+      "peak_contacts_all_worlds": 34148,
+      "time_min": 0.9999942183494568,
+      "time_max": 0.9999942183494568,
+      "max_abs_muscle_force": 2384.900634765625
+    },
+    {
+      "elapsed_seconds": 15.558566084015183,
+      "physics_env_steps_per_second": 131631.66765760683,
+      "control_env_steps_per_second": 26326.333531521366,
+      "per_env_realtime_factor": 0.06427327522344084,
+      "all_finite": {
+        "qpos": true,
+        "qvel": true,
+        "act": true,
+        "actuator_force": true
+      },
+      "overflow_bitmask": 0,
+      "peak_constraints_per_world": 282,
+      "peak_contacts_all_worlds": 34208,
+      "time_min": 0.9999942183494568,
+      "time_max": 0.9999942183494568,
+      "max_abs_muscle_force": 2381.892578125
+    }
+  ],
+  "timing_scope": "simulation, random excitation interpolation and Entity control write, per-step GPU overflow/contact/constraint monitoring; excludes initialization, reset, validation, policy, rewards, rendering, learning",
+  "gpu_memory": "11110 MiB, 32607 MiB, 100 %"
+}

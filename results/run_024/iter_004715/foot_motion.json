@@ -1,0 +1,248 @@
+{
+  "seconds": 20.0,
+  "reset_count": 0,
+  "contact_fraction_right_left": [
+    0.576,
+    0.564
+  ],
+  "touchdown_count_right_left": [
+    19,
+    18
+  ],
+  "foot_forward_separation_range_m": 0.9810654068891029,
+  "foot_vertical_range_right_left_m": [
+    0.19531981432968595,
+    0.18699226256422072
+  ],
+  "geometric_single_support_fraction": 0.86,
+  "geometric_flight_fraction": 0.0,
+  "caveat": "Recomputed geometric contacts, not contact forces. Touchdowns may include stumbling; inspect video and survival metrics. Older recordings without reset markers cannot exclude reset-induced transitions.",
+  "head_above_pelvis_m": {
+    "minimum": 0.5916752416506297,
+    "median": 0.5986060712164417,
+    "fraction_below_0_36m": 0.0
+  },
+  "recorded_command_mean_mps": 0.4000000059604645,
+  "recorded_velocity_mae_mps": 0.2670614529233426,
+  "recorded_velocity_mean_mps": 0.655593075575307,
+  "qualified_swing_landings": [
+    {
+      "time_seconds": 0.4,
+      "side": "left",
+      "air_seconds": 0.28,
+      "peak_clearance_m": 0.04097205772995949
+    },
+    {
+      "time_seconds": 0.92,
+      "side": "right",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.05198154225945473
+    },
+    {
+      "time_seconds": 1.4000000000000001,
+      "side": "left",
+      "air_seconds": 0.43999999999999995,
+      "peak_clearance_m": 0.05981466546654701
+    },
+    {
+      "time_seconds": 2.0,
+      "side": "right",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.05383732542395592
+    },
+    {
+      "time_seconds": 2.52,
+      "side": "left",
+      "air_seconds": 0.43999999999999995,
+      "peak_clearance_m": 0.05970172584056854
+    },
+    {
+      "time_seconds": 3.12,
+      "side": "right",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.05459418147802353
+    },
+    {
+      "time_seconds": 3.64,
+      "side": "left",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.05077720806002617
+    },
+    {
+      "time_seconds": 4.24,
+      "side": "right",
+      "air_seconds": 0.5199999999999999,
+      "peak_clearance_m": 0.05751298367977142
+    },
+    {
+      "time_seconds": 4.84,
+      "side": "left",
+      "air_seconds": 0.5599999999999999,
+      "peak_clearance_m": 0.05269981175661087
+    },
+    {
+      "time_seconds": 5.32,
+      "side": "right",
+      "air_seconds": 0.43999999999999995,
+      "peak_clearance_m": 0.05359956622123718
+    },
+    {
+      "time_seconds": 5.88,
+      "side": "left",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.05950484424829483
+    },
+    {
+      "time_seconds": 6.48,
+      "side": "right",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.05716921389102936
+    },
+    {
+      "time_seconds": 7.04,
+      "side": "left",
+      "air_seconds": 0.5199999999999999,
+      "peak_clearance_m": 0.06626655161380768
+    },
+    {
+      "time_seconds": 7.5600000000000005,
+      "side": "right",
+      "air_seconds": 0.43999999999999995,
+      "peak_clearance_m": 0.055013507604599
+    },
+    {
+      "time_seconds": 8.16,
+      "side": "left",
+      "air_seconds": 0.5199999999999999,
+      "peak_clearance_m": 0.060495831072330475
+    },
+    {
+      "time_seconds": 8.68,
+      "side": "right",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.06708049029111862
+    },
+    {
+      "time_seconds": 9.24,
+      "side": "left",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.05947455018758774
+    },
+    {
+      "time_seconds": 9.8,
+      "side": "right",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.055877912789583206
+    },
+    {
+      "time_seconds": 10.36,
+      "side": "left",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.053499333560466766
+    },
+    {
+      "time_seconds": 10.96,
+      "side": "right",
+      "air_seconds": 0.5199999999999999,
+      "peak_clearance_m": 0.05972963199019432
+    },
+    {
+      "time_seconds": 11.48,
+      "side": "left",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.057581886649131775
+    },
+    {
+      "time_seconds": 12.040000000000001,
+      "side": "right",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.04873982071876526
+    },
+    {
+      "time_seconds": 12.64,
+      "side": "left",
+      "air_seconds": 0.5199999999999999,
+      "peak_clearance_m": 0.055288881063461304
+    },
+    {
+      "time_seconds": 13.16,
+      "side": "right",
+      "air_seconds": 0.43999999999999995,
+      "peak_clearance_m": 0.057280283421278
+    },
+    {
+      "time_seconds": 13.76,
+      "side": "left",
+      "air_seconds": 0.5199999999999999,
+      "peak_clearance_m": 0.05771249160170555
+    },
+    {
+      "time_seconds": 14.280000000000001,
+      "side": "right",
+      "air_seconds": 0.43999999999999995,
+      "peak_clearance_m": 0.053481876850128174
+    },
+    {
+      "time_seconds": 14.84,
+      "side": "left",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.061708249151706696
+    },
+    {
+      "time_seconds": 15.4,
+      "side": "right",
+      "air_seconds": 0.43999999999999995,
+      "peak_clearance_m": 0.05957963317632675
+    },
+    {
+      "time_seconds": 16.0,
+      "side": "left",
+      "air_seconds": 0.5199999999999999,
+      "peak_clearance_m": 0.06355088949203491
+    },
+    {
+      "time_seconds": 16.52,
+      "side": "right",
+      "air_seconds": 0.43999999999999995,
+      "peak_clearance_m": 0.05339629575610161
+    },
+    {
+      "time_seconds": 17.12,
+      "side": "left",
+      "air_seconds": 0.5199999999999999,
+      "peak_clearance_m": 0.056073836982250214
+    },
+    {
+      "time_seconds": 17.68,
+      "side": "right",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.056620873510837555
+    },
+    {
+      "time_seconds": 18.240000000000002,
+      "side": "left",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.053164042532444
+    },
+    {
+      "time_seconds": 18.76,
+      "side": "right",
+      "air_seconds": 0.43999999999999995,
+      "peak_clearance_m": 0.05928417295217514
+    },
+    {
+      "time_seconds": 19.32,
+      "side": "left",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.054329000413417816
+    },
+    {
+      "time_seconds": 19.92,
+      "side": "right",
+      "air_seconds": 0.4799999999999999,
+      "peak_clearance_m": 0.05392090976238251
+    }
+  ],
+  "longest_alternating_landing_chain": 36,
+  "qualified_swing_definition": "Observed stance then 0.12\u20130.60 s airborne, clearance >=0.04 m, unilateral landing; chain gap <=1.2 s. 25 Hz geometric-contact estimate, not force-contact ground truth."
+}

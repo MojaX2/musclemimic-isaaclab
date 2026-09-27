@@ -1,0 +1,671 @@
+{
+  "upstream_commit": "5d4c8af12784f44bd2bb276e71db9cda6c9712fc",
+  "description": "Experimental source snapshot, run_026 completed at iteration 6716",
+  "files": [
+    {
+      "path": ".gitignore",
+      "sha256": "7f4709069b1a829e6d33b1e04df38b851b860744d7f0d90fbee09a3258c39e40",
+      "bytes": 73
+    },
+    {
+      "path": "LICENSE",
+      "sha256": "c71d239df91726fc519c6eb72d318ec65820627232b2f796219e87dcf35d0ab4",
+      "bytes": 11357
+    },
+    {
+      "path": "README.md",
+      "sha256": "a62c1070ac8d05b6fbf3e0c1e1f4a5e838597299b83e510bb9377a88f5f2d419",
+      "bytes": 8603
+    },
+    {
+      "path": "RESULTS.md",
+      "sha256": "b40579616d24987e5e595e155a0f970da194415a929e50f8cd2d80e43eb78eab",
+      "bytes": 1355
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/EXPERIMENT_STATUS.md",
+      "sha256": "83d5f9cd0f0ed3db683247b2ee1f9cd0aa16021028021a7a68c8ea8dd9355b00",
+      "bytes": 23223
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/G1_REWARD_DESIGN.md",
+      "sha256": "ed1b6c7491b49616e441d9f68ff2c3a9c2bbadb9fe121878ed576a6fd21ddb19",
+      "bytes": 12686
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/README.md",
+      "sha256": "dd8c9203f8d9cc8b9b9f2d15f13a10712107eeb5001170224da2b6cb324e4b32",
+      "bytes": 27054
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/analyze_velocity_rollout.py",
+      "sha256": "ca13d6dfe1d5481b38d79557d34122b54478f2c09bdc0416ce5969316b78a38e",
+      "bytes": 4294
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/cartesian_reference_reward.py",
+      "sha256": "a197e54b0069c49474a4097c32f03b7e59163fe3c658ceea4c67f933ce8d5792",
+      "bytes": 1959
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/check_effective_actuation.py",
+      "sha256": "db0a76c99a8faf48fa8f04a97aa023f3029fa319de52f3dcd04f31d551f22f24",
+      "bytes": 2963
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/check_isaaclab_fullbody.py",
+      "sha256": "9f26beb334c5bdd4ede64f5dae5d23a1305e17862c76dc78fbd664d29a638977",
+      "bytes": 4659
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/check_policy_alignment.py",
+      "sha256": "e50f333bbd3113c5a375f9e9b2ae203891ed3dea737346c99a32aa7580d0b7e3",
+      "bytes": 1339
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/check_reference_reward_preference.py",
+      "sha256": "a7137946fb45da79d9a87f3f6687c9276b59aeb0087611403c0999b3d0436f4a",
+      "bytes": 2592
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/compare_velocity_actor.py",
+      "sha256": "7ee8f699658171d5dbe15f23f69f7c157c47116833eadccb9d37af3b32a57aaf",
+      "bytes": 2798
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/diagnose_cartesian_reference.py",
+      "sha256": "a1c28e99aff1317dd5a10753027e3eaeef3be2faea38be3a6eeed69a30eb71c7",
+      "bytes": 2709
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/diagnose_reference_root_forces.py",
+      "sha256": "80710f12db03a1f7cbf72c1e231471af18d0ce489794402dae54134d987dc855",
+      "bytes": 6302
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/evaluate_pretrained.py",
+      "sha256": "30fdbf90ad667cc42923e33dc024368c1204d6499cdbdd228916b5d7e39ecd15",
+      "bytes": 6464
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/g1_muscle_posture.py",
+      "sha256": "30bdfee2e866081db198bed5f9820784a1c7f0a203a4ba4235b72dae94ecd47d",
+      "bytes": 254
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/g1_muscle_rewards.py",
+      "sha256": "a908caafc76c21d0ecfb0f0cc07e7c919afbde8984b61fc1579547841e412e3a",
+      "bytes": 6707
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/g1_muscle_sensors.py",
+      "sha256": "5d960b6964a1c1ed1d77ef9649772cea17ed4852a1ebb8c8cee102e760d5c165",
+      "bytes": 3538
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/inspect_velocity_run.py",
+      "sha256": "92fa0a5b9a062e44ae1e44595564b0fd50b1f7a973ea74f987e3a82f84c28fd8",
+      "bytes": 2519
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/mjx_alignment_results.json",
+      "sha256": "48a5dd78e60ca3d7f3739bd62506149dc8bd0c8891c484cccb23e41417b8bcf7",
+      "bytes": 2431
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/muscle_action_basis.py",
+      "sha256": "a706d7d7e09d393836c88d29a2b808b04b683db48e740dcb449692dca2f2a560",
+      "bytes": 1628
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/newton_fullbody_adapter.py",
+      "sha256": "899251a7a20c8998b05b8f4128e196df144a5494923579d3805de581f4acedf2",
+      "bytes": 8209
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/periodic_pose_reward.py",
+      "sha256": "f16536dff950ce261d241a474e269105d7b941f1e550ed104e48e0a89a952297",
+      "bytes": 1706
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/phase_residual_actor.py",
+      "sha256": "3d4f5d569ab3c3001b98bc7eae3baad76e56c854200a6bd8604e6fe975538e94",
+      "bytes": 2568
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/ppo_update_diagnostics.py",
+      "sha256": "4642ba67a2760b8d6b0af11c4fff2b2eea8416aafd99ffc27fbae0dc57155e98",
+      "bytes": 1471
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/prepare_cartesian_reference.py",
+      "sha256": "d12ba90695e42ac5d88129148a4e1094d20970dce5b27ea28dae4c0ae5851eb7",
+      "bytes": 3967
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/prepare_leg_only_basis.py",
+      "sha256": "b3aa75b271aa5c66f74ac543e53905d62f1f547fea42e0c2fc79c0054f7a8750",
+      "bytes": 3490
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/prepare_projected_resets.py",
+      "sha256": "09400975ac5fec5ac4c90b8fcd06219791f8161e9e9c6241bf71ac3b0878ae2d",
+      "bytes": 1632
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/prepare_trunk_leg_targets.py",
+      "sha256": "1f221dfa19dbfaa1d51be7256e9ecc32e0f45b6eff17079e8e55d9b5a8748e95",
+      "bytes": 1953
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/prepare_walking_resets.py",
+      "sha256": "54ac9303912e08c96418438b4f5274e778f24980b714f78ee468ea3c054f718a",
+      "bytes": 3813
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/pretrained_physics_worker.py",
+      "sha256": "ea5ab0fb8dbd5212f186598f176b9fbdfd3b0b4d0a800f99dae9fd499eac53c6",
+      "bytes": 9682
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/pretrained_results.json",
+      "sha256": "14a021de88b334a8d932df749ece4d85a877a030e21ab41301297fd3f67a1924",
+      "bytes": 782
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/probe_excitation_exploration.py",
+      "sha256": "36e7f9845b586daa668404d2243eee91d5a3c2458fc0fa811a8d7acd50ec7e1d",
+      "bytes": 2969
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/probe_muscle_allocation.py",
+      "sha256": "eb31f5be34a3e629be2fd8046b615a8eaaac80573c17ae9fe209adee443ed5f1",
+      "bytes": 9190
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/project_joint_equalities.py",
+      "sha256": "3c2880019b4d3863fb4175ed09702ba26090555bf0691cb1014f58aa10adf89b",
+      "bytes": 1802
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/record_direct_viewer.py",
+      "sha256": "4a8a324a162c5dcf8aa18eded51464b2b03d4498922ca7c83b7504defa1e2acc",
+      "bytes": 7077
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/record_original_mjx.py",
+      "sha256": "c19c5acf069146e5c6a6f3299680dcfbee7eaefeb1e8a6f0bd8418d4e717abd4",
+      "bytes": 4114
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/record_random_motion.py",
+      "sha256": "e31be544099cb39874e001c892014eed168993283ef78717a58e41ea02ec17ca",
+      "bytes": 4417
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/render_policy_comparison.py",
+      "sha256": "b987189b63cc912ef0a30e754c51a2a9c98aa8b75ad14de186db7a1dd42b6695",
+      "bytes": 4615
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/render_recorded_motion.py",
+      "sha256": "30c41931d167f0d99804842273a0e54dba13277319bd1fe1beb16dbdc1ae7bc3",
+      "bytes": 3436
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/render_velocity.py",
+      "sha256": "21449b709873dc1ba5103abc6d29792643ee8d78ed17d824a9187af469c06b0b",
+      "bytes": 624
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/request_eval_at_iteration.py",
+      "sha256": "67fee36a1a5fd5ab6975aba5f7ce67a8639f0db9833739d30ace9a55f61b3f71",
+      "bytes": 1301
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/results.json",
+      "sha256": "12dbd6b7d59369471152f553f1f2d90cf2b564cbcd383e2f7af54cf2cafb98e9",
+      "bytes": 936
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/root_assistance.py",
+      "sha256": "947ceb1f0849cadc378f8beaf55fdd77efa28c11eceef3518596cb471536e8ce",
+      "bytes": 1365
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/run_curriculum_study.py",
+      "sha256": "511850a22d26166b70c9bda23c6d138c4ac60525716976e28da1d9adc0b0336e",
+      "bytes": 3837
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_cartesian_reference_reward.py",
+      "sha256": "50fd788f3cd180d3a0157b4ffdd6e98bb478b33615cfaa60cec4727ea2a28123",
+      "bytes": 3149
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_exploration_reset.py",
+      "sha256": "e96422c24a8d76cf364fa2d87da8aba2f78a6bfbd298ffc71518cec8e81fadba",
+      "bytes": 1486
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_g1_muscle_posture.py",
+      "sha256": "3ee974ed0f7bca39feb1b6c969911bdee4b582d89edd5b769c460f442635577c",
+      "bytes": 539
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_g1_muscle_rewards.py",
+      "sha256": "ceaf689f9716f16311349f161cc7e776e3df1ded845c1b2b077bd4e6dc757e2e",
+      "bytes": 10646
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_muscle_action_basis.py",
+      "sha256": "6ee745612ad62e7ce0fb2b32013d298e4b8ca0744537dfa1bfb9e7433ea52e4b",
+      "bytes": 1445
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_periodic_pose_reward.py",
+      "sha256": "480b634908c3ac64a7292da46144c5333665e469f1fb24e3168be643252d6de9",
+      "bytes": 1309
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_phase_residual_actor.py",
+      "sha256": "1527d5cf11468750ea51bf976af6145e4743fe3b1fcd34ea45e7f37ac66ea890",
+      "bytes": 2745
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_ppo_update_diagnostics.py",
+      "sha256": "2176118828c5277d3ec789891138be1c4a913817510cf412b542d16472dc5d0c",
+      "bytes": 1804
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_project_joint_equalities.py",
+      "sha256": "b516f24ad610c7ea36a1a5df8154e5353051cd02f5ce2d31f769cd19e6f68c9d",
+      "bytes": 1673
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/test_root_assistance.py",
+      "sha256": "f1ae1415ac71ee8af2c23478cf0e7a4048442e1f430ccf1deffa306a5d8f92c2",
+      "bytes": 1957
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/train_velocity.py",
+      "sha256": "64df353ef6d2eeed77d2960ff0e07634517dfe3b80041c35ed54d8dfe482cce0",
+      "bytes": 27018
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/train_velocity_curriculum.py",
+      "sha256": "03ca908f3678933358db5eafaaac655d3de7e40af630e37b6eb61a7a37410b64",
+      "bytes": 56742
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/train_velocity_g1.py",
+      "sha256": "ccb9b7ff2c4263e6826d5218ced28cb9c91cbc84f5cb9f26e53fc21455110e27",
+      "bytes": 28569
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/velocity_checkpoint.py",
+      "sha256": "049c560cdf3600e4fa171a99e9cbe88224a5c68c4a031d27c2a836ba6201b206",
+      "bytes": 1241
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/velocity_exploration.py",
+      "sha256": "4a5f402a78c8e6e487db6fcb30296177fd3daf3be6262baf88a333ee1f660135",
+      "bytes": 1685
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/velocity_gait.py",
+      "sha256": "773c6504a8abf16f6568102c0687737a74a387465c4023e3fba8540bd936c6ad",
+      "bytes": 1480
+    },
+    {
+      "path": "examples/isaaclab_newton_fullbody/velocity_normalization.py",
+      "sha256": "2f2080eef066cfffd7e9fab756a148f9b4de5b986271ce523ca4486710d9ffa2",
+      "bytes": 853
+    },
+    {
+      "path": "results/run_021/config.json",
+      "sha256": "ba1b214da0fb9c1534609f3c1de20cb05beb21f5a7dcd87444eb429c8e9a797d",
+      "bytes": 1721
+    },
+    {
+      "path": "results/run_021/final_review.json",
+      "sha256": "0b3793a38878c0fbd13b02ff6277ea8cb6daa361fd7a8873f1da32b289555020",
+      "bytes": 2408
+    },
+    {
+      "path": "results/run_021/first_evaluation_review.json",
+      "sha256": "917152dc17ae1fa7f95c82b6a18094e583464fb611c07655290d23988cab238c",
+      "bytes": 2198
+    },
+    {
+      "path": "results/run_021/iter_000061/foot_motion.json",
+      "sha256": "d24cef5b4ae4cb140bd8b6ea0e9436859e374b506e3d9e3e7eca54d94f6381c3",
+      "bytes": 1183
+    },
+    {
+      "path": "results/run_021/iter_000061/metrics.json",
+      "sha256": "638e2d3c8d546438f4d4861a97c60abe562efcf8fe5468e89c3ad4acc2a24640",
+      "bytes": 1610
+    },
+    {
+      "path": "results/run_021/iter_000807/foot_motion.json",
+      "sha256": "0daa4703768367cd5e5f088b53df0aae38e183b4a9aa1be538637b61e0ad3b80",
+      "bytes": 1465
+    },
+    {
+      "path": "results/run_021/iter_000807/metrics.json",
+      "sha256": "e37767458ad4b0bf8cdc2d8793b1198faf106f6b3f2716520550a9fc935e7dfe",
+      "bytes": 1661
+    },
+    {
+      "path": "results/run_021/iter_001001/foot_motion.json",
+      "sha256": "723f02f31fe943e5b6dbda09ac81f19c79569fc6ef9e8a34a0a8d1b12037e357",
+      "bytes": 1635
+    },
+    {
+      "path": "results/run_021/iter_001001/metrics.json",
+      "sha256": "bca6cbf66902f7d1f936c790de255e1df478d1fdd5f207fb47bfff22e4a7ca4c",
+      "bytes": 1665
+    },
+    {
+      "path": "results/run_021/iter_001501/foot_motion.json",
+      "sha256": "b9db70a8fe020bc94af7915d62af88dde22dbc98957a7b7eb87f8d9f6b246aa4",
+      "bytes": 1178
+    },
+    {
+      "path": "results/run_021/iter_001501/metrics.json",
+      "sha256": "45c404dd1af7bc26208b60573bb06d18326dca8b70db05760253a13e14785492",
+      "bytes": 1660
+    },
+    {
+      "path": "results/run_021/iter_001999/metrics.json",
+      "sha256": "cb4a28b6ab4d1be1592f718c91ef886dde8a84a96bf987084381269d6d929d29",
+      "bytes": 1663
+    },
+    {
+      "path": "results/run_022/config.json",
+      "sha256": "083df67786a804e9592cc442a4910ea0b0393c62f920356c82b4e61d2cc30b61",
+      "bytes": 1795
+    },
+    {
+      "path": "results/run_022/final_review.json",
+      "sha256": "0597fb1c660d167ebadf2f7a40af79ff8b674fbab2efba6da73f9bc63211a67c",
+      "bytes": 164
+    },
+    {
+      "path": "results/run_022/first_evaluation_review.json",
+      "sha256": "ada4f1ce44d0ff58c81a8f1223b384aa72fbcf865a38f814e96644539e7bc1e0",
+      "bytes": 8153
+    },
+    {
+      "path": "results/run_022/hourly_evaluation_review.json",
+      "sha256": "a792c9cd496eff755c457836dae489e56a52325a3e8cb89aa1dcde83ad6ec2b3",
+      "bytes": 1788
+    },
+    {
+      "path": "results/run_022/iter_002067/foot_motion.json",
+      "sha256": "a8a7d35ddc5eec5cb17ca0511b625c4f6bebe7cc17ffef6a655f9d3e85a00dcd",
+      "bytes": 5424
+    },
+    {
+      "path": "results/run_022/iter_002067/metrics.json",
+      "sha256": "b5ab2303ec7a6550292e3b4658ae8afea2a1fa1bd985c8fdf20e976aef949769",
+      "bytes": 1683
+    },
+    {
+      "path": "results/run_022/iter_002840/foot_motion.json",
+      "sha256": "fa58937a62c3162a9c16ad7473176bbc75f8c079799c0d080050a59cdf6194cb",
+      "bytes": 6483
+    },
+    {
+      "path": "results/run_022/iter_002840/metrics.json",
+      "sha256": "9585067acc3d9845c33b67a3fa52e44ce0951471821212fd9eb0d82c13d8da0f",
+      "bytes": 1673
+    },
+    {
+      "path": "results/run_022/iter_002999/metrics.json",
+      "sha256": "0dd852c9eee972a04226cd76cb777467319f7574555a50c56874da830c907113",
+      "bytes": 1670
+    },
+    {
+      "path": "results/run_023/config.json",
+      "sha256": "c6c59dc167e86271b3f597cd378708c2f7d7b6fda7a14fc697631fb7c988bcb6",
+      "bytes": 1795
+    },
+    {
+      "path": "results/run_023/final_review.json",
+      "sha256": "c747c5943d0cae5b7afd5ff2dbb6e6c6b409aff7e59f58876c4a52b1de8f171a",
+      "bytes": 2619
+    },
+    {
+      "path": "results/run_023/first_evaluation_review.json",
+      "sha256": "f7cb2018ad6227ef01aa06b097abb5119d2a152f5d2b6477388003453a390258",
+      "bytes": 1498
+    },
+    {
+      "path": "results/run_023/hourly_evaluation_review.json",
+      "sha256": "b4e19a32a96d53ca981034bd3c2e4020aae40bf788b0f2de84022dff22a96449",
+      "bytes": 1503
+    },
+    {
+      "path": "results/run_023/iter_002909/foot_motion.json",
+      "sha256": "014b2a5993febd1209e22f9f853c638693dc06c5df0b4073c767aaf5b8fc689f",
+      "bytes": 6494
+    },
+    {
+      "path": "results/run_023/iter_002909/metrics.json",
+      "sha256": "6ee863417e7220a5af1b2855a17fc42e991da102a8c18dfba0c0eff8d3a8149d",
+      "bytes": 1687
+    },
+    {
+      "path": "results/run_023/iter_003689/foot_motion.json",
+      "sha256": "367ee0bb57e426d01c7fbd695a0cfd79e3937555ea7869aea55f37eb8825f0ba",
+      "bytes": 6549
+    },
+    {
+      "path": "results/run_023/iter_003689/metrics.json",
+      "sha256": "36c55225772257b6a9107641e9a95fd64cf5ab056a967fdadf1e46247ff543d2",
+      "bytes": 1683
+    },
+    {
+      "path": "results/run_023/iter_003840/metrics.json",
+      "sha256": "4c0a43d55d1e737d995124ad386cd0a156c42b191ae4952780b2ed83ae65c2e9",
+      "bytes": 1672
+    },
+    {
+      "path": "results/run_024/config.json",
+      "sha256": "675ca0d693d4018ca9763ad3530c01bb55fc79c12ba603ae416a5077be284584",
+      "bytes": 1795
+    },
+    {
+      "path": "results/run_024/final_review.json",
+      "sha256": "c17f9621b02201274684809ccf87bfbfa74ebf9819bbee053182e067fcf65e4f",
+      "bytes": 2489
+    },
+    {
+      "path": "results/run_024/first_evaluation_review.json",
+      "sha256": "0f547fadfb4b2752209d5398e02346d5c98285dd0addd46e8f42163856d5c3cf",
+      "bytes": 1490
+    },
+    {
+      "path": "results/run_024/hourly_evaluation_review.json",
+      "sha256": "8c9422df2bf9c367aa70ca4c8487738125578b470af884c1d7773381a66b82fb",
+      "bytes": 2812
+    },
+    {
+      "path": "results/run_024/iter_003913/foot_motion.json",
+      "sha256": "baaf6362c77df8858680e0884e32d51689d47b1781a6f8390f1ff3a0a8baff30",
+      "bytes": 6517
+    },
+    {
+      "path": "results/run_024/iter_003913/metrics.json",
+      "sha256": "46b709bd6761523b3559d303cf6bacf8cc8cffe7a2d5f66dcf720f365afdc1b8",
+      "bytes": 1684
+    },
+    {
+      "path": "results/run_024/iter_004715/foot_motion.json",
+      "sha256": "dd71456ad2509667be14a354dec81bc4520ff7b279258882726227bdc690d44d",
+      "bytes": 6675
+    },
+    {
+      "path": "results/run_024/iter_004715/metrics.json",
+      "sha256": "f7112321701b446c3d01c976f44d865f8da4f538712e1113066f7f0bc3587eb0",
+      "bytes": 1674
+    },
+    {
+      "path": "results/run_024/iter_004716/foot_motion.json",
+      "sha256": "ea86ac391ce840ab45668c21a87a5b5efe0c9d235eabb1d5776dc0888372d9b4",
+      "bytes": 6205
+    },
+    {
+      "path": "results/run_024/iter_004716/metrics.json",
+      "sha256": "dcf98a38cf6f0225abf13ab4af23fa6c38888cae47d5ff6e25047a9c70e59a43",
+      "bytes": 1677
+    },
+    {
+      "path": "results/run_024/iter_004840/metrics.json",
+      "sha256": "46cd21bdf52195935d4e1e63cb3f96379f639f5f80489aef9602f754745e6536",
+      "bytes": 1684
+    },
+    {
+      "path": "results/run_025/config.json",
+      "sha256": "42672ab975b601aac4ddfad2b765a5831a0135b3e4815f118171fbdb9461015f",
+      "bytes": 1795
+    },
+    {
+      "path": "results/run_025/final_review.json",
+      "sha256": "734311582443b07fc932c7fa301294676fe1c467e0ffaed630f9271f947147ef",
+      "bytes": 2548
+    },
+    {
+      "path": "results/run_025/first_evaluation_review.json",
+      "sha256": "90eb331003a0a499eb6a58deb5850ece1a9102faa9a52ad8b3d961b441e50f8b",
+      "bytes": 2200
+    },
+    {
+      "path": "results/run_025/hourly_evaluation_review.json",
+      "sha256": "78f89170dc83bcb76859a985e9c97b758c01559a238fc3c14a6188b668b0493e",
+      "bytes": 2347
+    },
+    {
+      "path": "results/run_025/iter_004790/foot_motion.json",
+      "sha256": "63ccec57bbfd70a5a83ae8f25695320fff41fc9af059c6d37f18fa4ad8989c0a",
+      "bytes": 6538
+    },
+    {
+      "path": "results/run_025/iter_004790/metrics.json",
+      "sha256": "5c4c4dbe94859a32efdefafa38fb3f554ecabfc50cedb9a19b5273901c58702b",
+      "bytes": 1690
+    },
+    {
+      "path": "results/run_025/iter_005624/foot_motion.json",
+      "sha256": "f89b26428c19037425d4fb12c7105115922158c91cbe7b88245dc7766d312c34",
+      "bytes": 6563
+    },
+    {
+      "path": "results/run_025/iter_005624/metrics.json",
+      "sha256": "db232d760a55a8d28e4f5cb08e9f11f79336cccfc1a7a19e5d1e0d1726626c0a",
+      "bytes": 1637
+    },
+    {
+      "path": "results/run_025/iter_005716/metrics.json",
+      "sha256": "08dddba2d6c13f936fefa4ae21fd717c16abfcb83727d14e45c8927726902748",
+      "bytes": 1679
+    },
+    {
+      "path": "results/run_026/config.json",
+      "sha256": "2d9ad5c120dc28528d637f1fc589a97d162ed1c16670671a45f9e2781f3085fa",
+      "bytes": 1822
+    },
+    {
+      "path": "results/run_026/final_review.json",
+      "sha256": "3f807f5c15f7f3a7647e27b617d72a05024b78a3cfdb417bb98d2fc4d78bfef0",
+      "bytes": 1970
+    },
+    {
+      "path": "results/run_026/first_evaluation_review.json",
+      "sha256": "97404558d5c87c00a8f317581779090f3791a877371a3807fad554b8eb041819",
+      "bytes": 2269
+    },
+    {
+      "path": "results/run_026/iter_005792/foot_motion.json",
+      "sha256": "50839ea7cb98d3448cc1f6e9d0da9cefbc80def92956295958b8029a400b517f",
+      "bytes": 6548
+    },
+    {
+      "path": "results/run_026/iter_005792/metrics.json",
+      "sha256": "9701448f89bb01eb7c8d9d8a4cec75206e188cd8eca70ed3b77b9bec2a0eada5",
+      "bytes": 1678
+    },
+    {
+      "path": "results/run_026/iter_006662/foot_motion.json",
+      "sha256": "d4836f5cddb4e375bbca147122626901bed38b91956e039a564ddffc5b69f397",
+      "bytes": 6555
+    },
+    {
+      "path": "results/run_026/iter_006662/metrics.json",
+      "sha256": "0d39723bfca46aa81f42e03be20a3a613d54d88df68c238437010581a23dd2dd",
+      "bytes": 1669
+    },
+    {
+      "path": "results/run_026/iter_006716/foot_motion.json",
+      "sha256": "ab4c3794108cf9221bebd73e42ef02b39339241d6065564e62015cd1a42cf690",
+      "bytes": 6403
+    },
+    {
+      "path": "results/run_026/iter_006716/metrics.json",
+      "sha256": "48c86b1cbfa3d60cdd2ecb953551eb0630be0f505c2373d7c6b0b0b7c5035dc9",
+      "bytes": 1659
+    },
+    {
+      "path": "validation/mjlab/README.md",
+      "sha256": "10322248ed210168e182f61b597cf0d4a2c613f603397dc9004695e4d1511020",
+      "bytes": 1363
+    },
+    {
+      "path": "validation/mjlab/benchmark_fullbody_4096.py",
+      "sha256": "60e036953f881d42fe7d68d8ec28a541d0f70ba505baabe3f7d692cf55bb1a26",
+      "bytes": 4945
+    },
+    {
+      "path": "validation/mjlab/benchmark_fullbody_8192.py",
+      "sha256": "c5976cc20e5def52a817342aa07d8d3a6ee9cf997600fff26dfcac44e2b11c2e",
+      "bytes": 4945
+    },
+    {
+      "path": "validation/mjlab/check_mjlab_gpu.py",
+      "sha256": "a505cb6abce3da0815518efaead27df8b1060165f63f13653f917595d86360a2",
+      "bytes": 5661
+    },
+    {
+      "path": "validation/mjlab/check_mjlab_load.py",
+      "sha256": "f28547adbab65bce807d652f1998a62305dd688d116559d2dfca36c0bfae68de",
+      "bytes": 3262
+    },
+    {
+      "path": "validation/mjlab/fullbody_4096_benchmark.json",
+      "sha256": "369cddaa5e543919597de226a53d3c422f4867a252ae73bb49afec6116c446a8",
+      "bytes": 2562
+    },
+    {
+      "path": "validation/mjlab/fullbody_8192_benchmark.json",
+      "sha256": "3d2c4b6fad7085f8eadd56a393807ae3fc18f63eb1a234b92a2531812f36dce8",
+      "bytes": 2559
+    },
+    {
+      "path": "validation/mjlab/mjlab_gpu_results.json",
+      "sha256": "2110111064604a6627019f032d023932f10c3ff41754c08d9087dd3d1bed1910",
+      "bytes": 1497
+    },
+    {
+      "path": "validation/mjlab/mjlab_load_results.json",
+      "sha256": "ce165a54e7d2e126dfafca6d0585b692b9104971b887c7c9d66754750b621898",
+      "bytes": 1900
+    },
+    {
+      "path": "validation/mjlab/render_mjlab.py",
+      "sha256": "c12bdbafad8d8521fa7db4035baba5049acf99ea52274caab1a854bbf26bc21e",
+      "bytes": 3134
+    }
+  ]
+}

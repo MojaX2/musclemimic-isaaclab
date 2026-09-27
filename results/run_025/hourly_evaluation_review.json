@@ -1,0 +1,68 @@
+{
+  "iteration": 5624,
+  "metrics": {
+    "label": "iter_005624",
+    "termination_version": "g1_muscle_v2_torso",
+    "minimum_head_gap_m": 0.3591039733904444,
+    "stochastic": true,
+    "mean_excitation": false,
+    "initial_phase": "random",
+    "initial_velocity_perturbation_std": 0.02,
+    "support": 0.0,
+    "commands": {
+      "0.0": {
+        "survival": 0.6787109375,
+        "mean_seconds": 18.062801361083984,
+        "velocity_mae": 0.09487666189670563
+      },
+      "0.4": {
+        "survival": 1.0,
+        "mean_seconds": 20.000267028808594,
+        "velocity_mae": 0.27869901061058044
+      },
+      "0.8": {
+        "survival": 1.0,
+        "mean_seconds": 20.000267028808594,
+        "velocity_mae": 0.14733785390853882
+      },
+      "1.2": {
+        "survival": 1.0,
+        "mean_seconds": 20.000267028808594,
+        "velocity_mae": 0.15199923515319824
+      }
+    },
+    "initial_state": "upright",
+    "phase_harmonics": 4,
+    "solver_iterations": 20,
+    "root_assistance_strength": 0.0,
+    "root_controller_parameters": {
+      "weight_support": 0.3,
+      "vertical_limit": 0.6
+    },
+    "first_episode_gait": {
+      "qualified_landings_mean": 26.230712890625,
+      "longest_alternating_chain_mean": 26.211181640625,
+      "fraction_with_chain_at_least_4": 0.75,
+      "failure_fractions": {
+        "low_pelvis": 0.0,
+        "high_pelvis": 0.0,
+        "root_tilt": 0.080322265625,
+        "trunk_fold": 0.0,
+        "nonfinite": 0.0
+      },
+      "note": "Force-contact touchdown criterion, before first termination; chain gap <=1.2s. Failure causes may overlap."
+    },
+    "external_force_check": {
+      "expected_upward_N": 0.0,
+      "max_sum_error_N": 0.0,
+      "max_external_wrench_component": 0.0,
+      "max_other_component": 0.0
+    }
+  },
+  "decision": "Finish remaining 92 updates to endpoint 5716; do not extend unchanged beyond endpoint. Stop sampling alone has not maintained initial improvement: stop survival declined from .961 to .679 and slow MAE .249 to .279. Moving survival reached 1.0. Investigate stopping termination timing and tracking reward before next trial.",
+  "next_candidates": [
+    "Longer training episodes to expose late stop instability beyond current 10 s horizon",
+    "Tracking weight increase for persistent slow-command overspeed"
+  ],
+  "goal_achieved": false
+}

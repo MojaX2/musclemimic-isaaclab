@@ -1,0 +1,66 @@
+{
+  "created": "2026-09-27T01:34:56.898247+00:00",
+  "metrics": {
+    "label": "iter_001999",
+    "termination_version": "g1_muscle_v2_torso",
+    "minimum_head_gap_m": 0.3591039733904444,
+    "stochastic": true,
+    "mean_excitation": false,
+    "initial_phase": "random",
+    "initial_velocity_perturbation_std": 0.02,
+    "support": 0.0,
+    "commands": {
+      "0.0": {
+        "survival": 0.0,
+        "mean_seconds": 1.6781435012817383,
+        "velocity_mae": 0.3293251395225525
+      },
+      "0.4": {
+        "survival": 0.0,
+        "mean_seconds": 1.9290612936019897,
+        "velocity_mae": 0.28960561752319336
+      },
+      "0.8": {
+        "survival": 0.00390625,
+        "mean_seconds": 6.017374038696289,
+        "velocity_mae": 0.3617410659790039
+      },
+      "1.2": {
+        "survival": 0.017578125,
+        "mean_seconds": 6.514963150024414,
+        "velocity_mae": 0.5502139329910278
+      }
+    },
+    "initial_state": "upright",
+    "phase_harmonics": 4,
+    "solver_iterations": 20,
+    "root_assistance_strength": 0.0,
+    "root_controller_parameters": {
+      "weight_support": 0.3,
+      "vertical_limit": 0.6
+    },
+    "first_episode_gait": {
+      "qualified_landings_mean": 4.1005859375,
+      "longest_alternating_chain_mean": 3.566162109375,
+      "fraction_with_chain_at_least_4": 0.312744140625,
+      "failure_fractions": {
+        "low_pelvis": 0.578369140625,
+        "high_pelvis": 0.0,
+        "root_tilt": 0.3544921875,
+        "trunk_fold": 0.14013671875,
+        "nonfinite": 0.0
+      },
+      "note": "Force-contact touchdown criterion, before first termination; chain gap <=1.2s. Failure causes may overlap."
+    },
+    "external_force_check": {
+      "expected_upward_N": 0.0,
+      "max_sum_error_N": 0.0,
+      "max_external_wrench_component": 0.0,
+      "max_other_component": 0.0
+    }
+  },
+  "walking_success": false,
+  "decision": "Training completed 2000 updates. Evaluate checkpoint1999 at constant command1.0, upright random phase, 256 environments, zero force before selecting continuation or curriculum change.",
+  "diagnostic_run": "outputs/isaac_velocity_g1/run021_upright_speed1_eval",
+  "interpretation": "Alternating chain>=4 fraction increased 0.1223 to0.3127 and command0.8 velocityMAE improved0.895 to0.362. Stability still inadequate: command0.8 mean6.017s and1.2 mean6.515s; aggregate gait does not identify per-command distribution."
+}

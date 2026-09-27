@@ -14,13 +14,13 @@
     },
     {
       "path": "README.md",
-      "sha256": "f10f73c9751c9659c873e6d48af5da4c549af8ff9b523e618e24d2717a4b0b8e",
-      "bytes": 7810
+      "sha256": "c920da456137c0dec62723487f460ee4acaa92f1be5c9fcb3c75278df31d72f8",
+      "bytes": 7926
     },
     {
       "path": "RESULTS.md",
-      "sha256": "b40579616d24987e5e595e155a0f970da194415a929e50f8cd2d80e43eb78eab",
-      "bytes": 1355
+      "sha256": "07446e9ce03ccf65479ed86ef13874c8aad59fe75c7c913838c5fa0a9eddb742",
+      "bytes": 1569
     },
     {
       "path": "artifacts/best-policy/README.md",
@@ -101,6 +101,11 @@
       "path": "docs/EXPERIMENT_OVERVIEW.md",
       "sha256": "0275d21afd4f008552a63492b68bb5d531f3b07b8772e8ec7c865cf1d725897a",
       "bytes": 9126
+    },
+    {
+      "path": "docs/EXPERIMENT_REPORT.md",
+      "sha256": "5f20bd7b84bdbdb81363b23767cb0035f6fd14380bf0caf446c010f83faba31d",
+      "bytes": 19427
     },
     {
       "path": "examples/isaaclab_newton_fullbody/EXPERIMENT_STATUS.md",
@@ -466,6 +471,16 @@
       "path": "results/run_021/iter_001999/metrics.json",
       "sha256": "cb4a28b6ab4d1be1592f718c91ef886dde8a84a96bf987084381269d6d929d29",
       "bytes": 1663
+    },
+    {
+      "path": "results/run_021/upright_speed1/foot_motion.json",
+      "sha256": "c8ac46ca565998e5b05b6e886986c54c67fcd2e8359357c9d8071ea76e792dfb",
+      "bytes": 6351
+    },
+    {
+      "path": "results/run_021/upright_speed1/metrics.json",
+      "sha256": "55b29ed0808ecd6d8ff5ab30f0b5d7fbb717646a0b5b48bec45676a252f30d87",
+      "bytes": 1439
     },
     {
       "path": "results/run_022/config.json",

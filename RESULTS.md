@@ -15,4 +15,4 @@ run_026は予定した6716更新と最終評価を完了し、学習プロセス
 
 低速指令への過速度が残っています。指令変更への追従、長時間、複数seed、決定論的評価の頑健性は未検証です。全身の交互歩行を得た実験であり、完成した汎用歩行制御器ではありません。
 
-最終重みは元ワークスペースの`outputs/isaac_velocity_g1/run_026/model_6716.pt`および`latest.pt`に保存。重みと動画はこのソーススナップショットには同梱していません。詳細値は[最終評価JSON](results/run_026/iter_006716/metrics.json)を参照してください。
+最終重みは元ワークスペースの`outputs/isaac_velocity_g1/run_026/model_6716.pt`および`latest.pt`に保存。run_026の最終重みは同梱していません。配布用には評価のバランスがよかった[run_025 / 5716の重みとGIF](artifacts/best-policy/README.md)を同梱しています。選定理由と実験全体の経緯は[実験報告](docs/EXPERIMENT_REPORT.md)を参照してください。詳細値は[最終評価JSON](results/run_026/iter_006716/metrics.json)を参照してください。

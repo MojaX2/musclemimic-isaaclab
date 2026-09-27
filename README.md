@@ -103,6 +103,7 @@ velocityは0.4–1.2 m/s、停止指令あり、参照リセット50%、Cartesia
 配布ファイルのみを別ディレクトリにコピーし、PyPIから取得したモデルを使って、既存の固定バージョンIsaac Lab環境上で検証します。結果は[ポータビリティ検証](validation/portable/README.md)に記録しています。OS・ドライバを含む新規マシンへのインストールや、別GPUでの学習収束を検証したものではありません。
 
 - [保存した方策・選定基準・評価結果](artifacts/best-policy/README.md)
+- [今回の実験を通して読む：導入の問題・試行錯誤・成果と限界](docs/EXPERIMENT_REPORT.md)
 - [終了時の実験結果](RESULTS.md)
 - [Isaac Lab実装の詳細と実験履歴](docs/EXPERIMENT_OVERVIEW.md)
 - [mjlabのモデル読み込み・ランダム駆動・速度測定](validation/mjlab/README.md)

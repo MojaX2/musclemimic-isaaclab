@@ -1,0 +1,27 @@
+{
+  "fresh_training": {
+    "num_envs": 4,
+    "seconds": 1,
+    "exit_code": 0,
+    "video_bytes": 268287,
+    "external_force_max": 0,
+    "final_iteration": 1
+  },
+  "pretrained_inference": {
+    "num_envs": 4,
+    "seconds": 20,
+    "exit_code": 0,
+    "video_bytes": 4967123,
+    "external_force_max": 0
+  },
+  "continued_training": {
+    "num_envs": 4,
+    "seconds": 1,
+    "exit_code": 0,
+    "video_bytes": 251448,
+    "external_force_max": 0,
+    "final_iteration": 5718,
+    "source_iteration": 5716,
+    "actor_tensors_changed": 14
+  }
+}

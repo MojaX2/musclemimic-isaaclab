@@ -1,11 +1,11 @@
 {
   "upstream_commit": "5d4c8af12784f44bd2bb276e71db9cda6c9712fc",
-  "description": "Experiment snapshot with selected run_025/5716 checkpoint and inference artifacts",
+  "description": "Runnable training and inference entry points, selected policy and reference assets",
   "files": [
     {
       "path": ".gitignore",
-      "sha256": "507a3f510b18c4eaa8e44ea31dfd2a1ada97cbf0a0ac822768d9099a4eeee45e",
-      "bytes": 177
+      "sha256": "7db8169aefe402cf0cbef2360b5cd2f6b5f4ef843dbc28802557e597a32f1068",
+      "bytes": 205
     },
     {
       "path": "LICENSE",
@@ -14,8 +14,8 @@
     },
     {
       "path": "README.md",
-      "sha256": "d6157fc6d6f83e88f4a07e96eb692c5d6c85484fba32d4b001bc24399bf3207b",
-      "bytes": 8917
+      "sha256": "f10f73c9751c9659c873e6d48af5da4c549af8ff9b523e618e24d2717a4b0b8e",
+      "bytes": 7810
     },
     {
       "path": "RESULTS.md",
@@ -24,8 +24,8 @@
     },
     {
       "path": "artifacts/best-policy/README.md",
-      "sha256": "8f5d7fbeee765828b648f3bfb7564b0333b0f125ff103dd5280eda1062e57c8a",
-      "bytes": 3665
+      "sha256": "f117cb9ef26fbec5fd84e645bb98f1f2e8cbbac8c77d53e2e316e1d498d4fd83",
+      "bytes": 2879
     },
     {
       "path": "artifacts/best-policy/checkpoint.pt",
@@ -34,8 +34,8 @@
     },
     {
       "path": "artifacts/best-policy/evaluate.py",
-      "sha256": "037ca20a4cb80229ad9a2eda0ebe65ccf427ec20abb5d166f7da29f3ec210236",
-      "bytes": 2112
+      "sha256": "21b9c2c8c5ac0a408ba52d493b0e3b7738e2cd43b67cdf14c90dd21dfedfeffb",
+      "bytes": 264
     },
     {
       "path": "artifacts/best-policy/foot_motion.json",
@@ -81,6 +81,26 @@
       "path": "artifacts/best-policy/walking.gif",
       "sha256": "b9abc777d0458e10bdef90747cafeb572523470fe6d2537540b56628e6740cb3",
       "bytes": 1341720
+    },
+    {
+      "path": "artifacts/reference/README.md",
+      "sha256": "76e4b37f9601619f99546543005c8e50ee41e5dfc12aacd2c887c556fec13168",
+      "bytes": 1145
+    },
+    {
+      "path": "artifacts/reference/periodic_cartesian_fullcycle_targets.npz",
+      "sha256": "1da14f5eab9b33c0f1c3a68d5474e87c469a13c61dfa05652456c1d169be0ff7",
+      "bytes": 5144
+    },
+    {
+      "path": "artifacts/reference/projected_cycle_walking_states.npz",
+      "sha256": "eb3b809f12a3f47d019c539211d87630775be0b0a5e4270281c17a2fae6a8678",
+      "bytes": 84139
+    },
+    {
+      "path": "docs/EXPERIMENT_OVERVIEW.md",
+      "sha256": "0275d21afd4f008552a63492b68bb5d531f3b07b8772e8ec7c865cf1d725897a",
+      "bytes": 9126
     },
     {
       "path": "examples/isaaclab_newton_fullbody/EXPERIMENT_STATUS.md",
@@ -179,8 +199,8 @@
     },
     {
       "path": "examples/isaaclab_newton_fullbody/newton_fullbody_adapter.py",
-      "sha256": "899251a7a20c8998b05b8f4128e196df144a5494923579d3805de581f4acedf2",
-      "bytes": 8209
+      "sha256": "a22ea0636956b60e95a6d960caa2aa07431582c42677b8639d26282f86da8a44",
+      "bytes": 8532
     },
     {
       "path": "examples/isaaclab_newton_fullbody/periodic_pose_reward.py",
@@ -264,8 +284,8 @@
     },
     {
       "path": "examples/isaaclab_newton_fullbody/render_policy_comparison.py",
-      "sha256": "b987189b63cc912ef0a30e754c51a2a9c98aa8b75ad14de186db7a1dd42b6695",
-      "bytes": 4615
+      "sha256": "f6ac7be059ee65b3f676906e07efa63d7ac1f1e007e2784b209e5cf4c3519311",
+      "bytes": 4632
     },
     {
       "path": "examples/isaaclab_newton_fullbody/render_recorded_motion.py",
@@ -354,8 +374,8 @@
     },
     {
       "path": "examples/isaaclab_newton_fullbody/train_velocity_curriculum.py",
-      "sha256": "ae1eaa96a6a07b233bd0962993238afc0188ede12417b6e713eeaf3dd96738ba",
-      "bytes": 56937
+      "sha256": "c4dfb0d2da1f5a0b1d1e2dd42d8417e52f749e63851b561df70bd1731b866f5e",
+      "bytes": 57164
     },
     {
       "path": "examples/isaaclab_newton_fullbody/train_velocity_g1.py",
@@ -381,6 +401,11 @@
       "path": "examples/isaaclab_newton_fullbody/velocity_normalization.py",
       "sha256": "2f2080eef066cfffd7e9fab756a148f9b4de5b986271ce523ca4486710d9ffa2",
       "bytes": 853
+    },
+    {
+      "path": "requirements-runtime.txt",
+      "sha256": "f2174bfa7f5cbd61a9894808b125cb1b940744f8863912c390356f85499938da",
+      "bytes": 311
     },
     {
       "path": "results/run_021/config.json",
@@ -678,6 +703,11 @@
       "bytes": 1659
     },
     {
+      "path": "scripts/run.py",
+      "sha256": "a1ec61774df0ac948def8d760b8167068bd1b28e167d6dd3d2c9fa93433c177a",
+      "bytes": 7085
+    },
+    {
       "path": "validation/mjlab/README.md",
       "sha256": "10322248ed210168e182f61b597cf0d4a2c613f603397dc9004695e4d1511020",
       "bytes": 1363
@@ -726,6 +756,46 @@
       "path": "validation/mjlab/render_mjlab.py",
       "sha256": "c12bdbafad8d8521fa7db4035baba5049acf99ea52274caab1a854bbf26bc21e",
       "bytes": 3134
+    },
+    {
+      "path": "validation/portable/README.md",
+      "sha256": "a9253429f53f2e45cb47fece9832f48860b281def4bf2493e92fb81d2945c2e4",
+      "bytes": 2141
+    },
+    {
+      "path": "validation/portable/continued_training_foot_motion.json",
+      "sha256": "f0affc1330575b8dd40e5a54f7a36c75392baa67a7629e12970378026e1e6f19",
+      "bytes": 1307
+    },
+    {
+      "path": "validation/portable/continued_training_metrics.json",
+      "sha256": "1de3333e4f42e45621ef360ccfa1d968ec1977a1f13bfbf23fd15cdd369a1259",
+      "bytes": 1592
+    },
+    {
+      "path": "validation/portable/fresh_training_foot_motion.json",
+      "sha256": "d8e5e0dfcf2d3ec358e3c68df341221e3b71770cbdfb4a6403801d5724108886",
+      "bytes": 1175
+    },
+    {
+      "path": "validation/portable/fresh_training_metrics.json",
+      "sha256": "f5336fae3c3d16c772f4bcf5faaec045157ba1dd1f0d8224784ef0e3ef4b687e",
+      "bytes": 1586
+    },
+    {
+      "path": "validation/portable/pretrained_inference_foot_motion.json",
+      "sha256": "eec9418be0702b54d951397fa623d7391bc9d8888277e039bc88be864b769650",
+      "bytes": 6539
+    },
+    {
+      "path": "validation/portable/pretrained_inference_metrics.json",
+      "sha256": "ffde747d027522c6d779bcfc5037516498520dc5941babd0e2c47954fa73f687",
+      "bytes": 1593
+    },
+    {
+      "path": "validation/portable/summary.json",
+      "sha256": "47558fdb6615b48cedbb67ff55718638b89005916d0b797fef30938e646848fd",
+      "bytes": 550
     }
   ]
 }

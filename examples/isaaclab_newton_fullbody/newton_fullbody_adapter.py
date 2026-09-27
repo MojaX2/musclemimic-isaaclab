@@ -1,13 +1,21 @@
 """External model adapter; preserves native equalities through multi-DOF import."""
 from pathlib import Path
 import os
+import tempfile
+import importlib.util
 import re
 import xml.etree.ElementTree as ET
 import numpy as np
 import mujoco,newton,warp as wp
 from newton.solvers import SolverMuJoCo
-ROOT=Path('/tmp/muscle-feasibility')
-SOURCE=Path(os.environ.get('MM_MODEL_XML', str(Path(__file__).resolve().parents[2]/'.venv/lib/python3.11/site-packages/musclemimic_models/model/body/myofullbody.xml')))
+ROOT=Path(os.environ.get('MM_ADAPTER_CACHE',tempfile.mkdtemp(prefix='musclemimic-adapter-')))
+if os.environ.get('MM_MODEL_XML'):
+    SOURCE=Path(os.environ['MM_MODEL_XML'])
+else:
+    package=importlib.util.find_spec('musclemimic_models')
+    if package is None or not package.submodule_search_locations:
+        raise RuntimeError('Install musclemimic_models or set MM_MODEL_XML to the model XML')
+    SOURCE=Path(next(iter(package.submodule_search_locations)))/'model/body/myofullbody.xml'
 ROOT.mkdir(parents=True,exist_ok=True)
 REFERENCE=mujoco.MjModel.from_xml_path(str(SOURCE))
 JOINT_DOF={}

@@ -28,27 +28,14 @@ GIF: 保存済み20秒評価の先頭10秒、240×270、8 fps、約1.3 MB。Isaa
 
 ## 再評価
 
-ルートREADMEに記載したIsaac Lab / Newton / RSL-RL環境と、元のMuscleMimicモデルパッケージが必要です。元データやmeshのライセンスはそれぞれに従ってください。モデル本体のディレクトリには`meshes/`と`scene/`が含まれます。
-
-このリポジトリのルートから、Isaac Lab環境のPythonで実行します：
+[ルートREADME](../../README.md)のインストール手順を実行し、リポジトリのルートで次を実行します。
 
 ```bash
-/path/to/IsaacLab/.venv/bin/python artifacts/best-policy/evaluate.py \
-  --model-assets /path/to/site-packages/musclemimic_models/model \
-  --num-envs 4096 \
-  --run-dir outputs/best_policy_eval
+"$ISAACLAB_PYTHON" scripts/run.py evaluate --num-envs 4096 --run-dir outputs/eval_best
 ```
 
-`outputs/isaac_velocity/assets/`にテンプレートからモデルと初期値を準備します。異なる既存ファイルは上書きしません。評価は原条件と同じ直立開始・ランダム位相・速度摂動0.02・20秒・確率的方策・外力ゼロです。4指令は環境ごとに割り当てられます。4096環境では各指令1024環境です。
+モデルはインストール済み`musclemimic_models`から自動検出されます。生成物は`outputs/eval_best/evaluations/evaluation/`の評価JSON、軌道、MP4です。描画不要なら`--no-render`を付けます。
 
-参照リセット・参照報酬はこの推論に不要なので、AMASSの生データや学習用参照バンクは同梱していません。これは評価の再実行用であり、元学習全体の再現用データ一式ではありません。動画描画は省略し、指標と状態記録を保存します。別途描画する場合は既存の`render_velocity.py`を使い、描画用Pythonとffmpegのパスを環境に合わせてください。
+`evaluate.py`も共通入口へ転送する互換スクリプトとして残しています。AMASSの生データと学習用参照バンクは推論には不要です。学習用の小規模な派生配列は別途`artifacts/reference/`に収録しています。
 
-小規模な動作確認：
-
-```bash
-/path/to/IsaacLab/.venv/bin/python artifacts/best-policy/evaluate.py \
-  --model-assets /path/to/site-packages/musclemimic_models/model \
-  --num-envs 4 --eval-seconds 1 --run-dir outputs/best_policy_smoke
-```
-
-この短時間テストは読み込み・推論・GPU動作の確認で、歩行性能の再検証には4096環境・20秒の評価を使ってください。
+`smoke_validation.json`は以前の4環境・1秒テストです。最新の配布用経路の学習・推論・描画テストは[ポータビリティ検証](../../validation/portable/README.md)を参照してください。短時間・少数環境での動作確認は4096環境の歩行性能再現を意味しません。

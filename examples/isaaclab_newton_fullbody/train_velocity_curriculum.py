@@ -3,7 +3,7 @@
 Checkpoints, hourly evaluations and videos are local. Optional reference states
 initialize training episodes; evaluation always begins from the upright pose.
 """
-import argparse, json, math, os, time, subprocess, re
+import argparse, json, math, os, time, subprocess, re, sys
 from pathlib import Path
 
 ROOT=Path(__file__).resolve().parents[2]
@@ -588,7 +588,7 @@ def main():
             result,folder=env.evaluate(actor,'evaluation',a.eval_seconds,support=a.eval_support,root_strength=a.eval_root_assistance)
             print('EVALUATION',json.dumps(result),flush=True)
             if not a.no_render:
-                subprocess.run([str(ROOT/'.venv/bin/python'),str(Path(__file__).with_name('render_velocity.py')),str(folder)],env={**os.environ,'MUJOCO_GL':'egl'},check=True)
+                subprocess.run([os.environ.get('MM_RENDER_PYTHON',sys.executable),str(Path(__file__).with_name('render_velocity.py')),str(folder)],env={**os.environ,'MUJOCO_GL':'egl'},check=True)
             return
         writer=SummaryWriter(str(a.run_dir/'tensorboard'));start=time.monotonic();last_eval=start;last_save=start;last_video=start;eval_count=0
         def save(it,name):
@@ -596,10 +596,11 @@ def main():
             if env.action_transform is not None:
                 state.update(action_basis=env.action_transform.basis.detach().cpu(),baseline_actor_state_dict=env.baseline_actor.state_dict())
             tmp=a.run_dir/(name+'.tmp');torch.save(state,tmp);tmp.replace(a.run_dir/name)
+        render_jobs=[]
         def render(folder):
             if a.no_render:return
             with (folder/'render.log').open('w') as log:
-                subprocess.Popen([str(ROOT/'.venv/bin/python'),str(Path(__file__).with_name('render_velocity.py')),str(folder)],env={**os.environ,'MUJOCO_GL':'egl'},stdout=log,stderr=subprocess.STDOUT)
+                render_jobs.append(subprocess.Popen([os.environ.get('MM_RENDER_PYTHON',sys.executable),str(Path(__file__).with_name('render_velocity.py')),str(folder)],env={**os.environ,'MUJOCO_GL':'egl'},stdout=log,stderr=subprocess.STDOUT))
         print('READY',json.dumps({'n':env.n,'obs':obs['policy'].shape[1],'actions':env.num_actions}),flush=True)
         if a.smoke:
             if env.action_transform is not None:
@@ -702,5 +703,7 @@ def main():
             if (a.run_dir/'STOP').exists():
                 save(it,'stopped.pt');print('STOP_REQUESTED',flush=True);break
         save(it,'latest.pt');writer.close()
+        for job in render_jobs:
+            if job.wait()!=0:raise RuntimeError('Video rendering failed; inspect evaluation render.log')
 
 if __name__=='__main__':main()

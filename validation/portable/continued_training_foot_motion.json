@@ -1,0 +1,38 @@
+{
+  "seconds": 1.0,
+  "reset_count": 0,
+  "contact_fraction_right_left": [
+    0.6,
+    0.6
+  ],
+  "touchdown_count_right_left": [
+    2,
+    1
+  ],
+  "foot_forward_separation_range_m": 0.6381151682588805,
+  "foot_vertical_range_right_left_m": [
+    0.05100702096268113,
+    0.12040495468998386
+  ],
+  "geometric_single_support_fraction": 0.8,
+  "geometric_flight_fraction": 0.0,
+  "caveat": "Recomputed geometric contacts, not contact forces. Touchdowns may include stumbling; inspect video and survival metrics. Older recordings without reset markers cannot exclude reset-induced transitions.",
+  "head_above_pelvis_m": {
+    "minimum": 0.593193841342087,
+    "median": 0.5971344019932674,
+    "fraction_below_0_36m": 0.0
+  },
+  "recorded_command_mean_mps": 0.4000000059604645,
+  "recorded_velocity_mae_mps": 0.1515541212260723,
+  "recorded_velocity_mean_mps": 0.29408540681004525,
+  "qualified_swing_landings": [
+    {
+      "time_seconds": 0.56,
+      "side": "right",
+      "air_seconds": 0.36,
+      "peak_clearance_m": 0.04766682907938957
+    }
+  ],
+  "longest_alternating_landing_chain": 1,
+  "qualified_swing_definition": "Observed stance then 0.12\u20130.60 s airborne, clearance >=0.04 m, unilateral landing; chain gap <=1.2 s. 25 Hz geometric-contact estimate, not force-contact ground truth."
+}

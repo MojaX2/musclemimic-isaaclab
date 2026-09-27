@@ -1,5 +1,6 @@
 """Render saved physics rollouts with a common camera; never integrate dynamics."""
-import argparse,json,subprocess
+import argparse,json,subprocess,os
+import imageio_ffmpeg
 from pathlib import Path
 import numpy as np
 import mujoco
@@ -19,8 +20,11 @@ for folder in folders:
     model.tendon_width[:]=np.minimum(model.tendon_width,.0025)
     models.append(model);data.append(mujoco.MjData(model));recordings.append(np.load(folder/'rollout.npz'));renderers.append(mujoco.Renderer(model,height=640,width=640))
 width=640*len(folders);height=720;fps=25
-font=ImageFont.truetype('/usr/share/fonts/truetype/dejavu/DejaVuSans.ttf',18)
-ffmpeg=next(Path('/tmp/muscle-feasibility/mjlab-packages/imageio_ffmpeg/binaries').glob('ffmpeg-linux*'))
+try:
+    font=ImageFont.truetype(os.environ.get('MM_FONT','DejaVuSans.ttf'),18)
+except OSError:
+    font=ImageFont.load_default(size=18)
+ffmpeg=imageio_ffmpeg.get_ffmpeg_exe()
 writer=subprocess.Popen([str(ffmpeg),'-y','-loglevel','error','-f','rawvideo','-pix_fmt','rgb24','-s',f'{width}x{height}','-r',str(fps),'-i','-','-an','-c:v','libx264','-crf','19','-pix_fmt','yuv420p','-movflags','+faststart',a.output],stdin=subprocess.PIPE)
 opt=mujoco.MjvOption();opt.geomgroup[:]=[1,1,0,0,0,0];opt.sitegroup[:]=0;opt.tendongroup[:]=1;opt.flags[mujoco.mjtVisFlag.mjVIS_TENDON]=True
 cam=mujoco.MjvCamera();cam.distance=3.;cam.azimuth=135;cam.elevation=-12

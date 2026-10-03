@@ -50,6 +50,7 @@ p.add_argument('--ppo-diagnostics',action='store_true')
 p.add_argument('--desired-kl',type=float,default=.02)
 p.add_argument('--eval-only',action='store_true')
 p.add_argument('--no-render',action='store_true',help='Skip video rendering; retain evaluation metrics and recorded states')
+p.add_argument('--skin-observations',action='store_true',help='Append 15 coarse body contact forces to the policy observation; train from scratch')
 p.add_argument('--eval-reference-start',action='store_true',help='Diagnostic eval-only initialization from the reference bank; not an upright-start test')
 p.add_argument('--stochastic-eval',action='store_true')
 p.add_argument('--mean-excitation-eval',action='store_true')
@@ -89,6 +90,7 @@ if a.reset_exploration_std is not None and (not a.resume or not math.isfinite(a.
 if a.exploration_anneal_updates<=0:p.error('--exploration-anneal-updates must be positive')
 if a.eval_command_sequence and not a.eval_only:p.error('--eval-command-sequence requires --eval-only')
 if a.eval_reference_start and not (a.eval_only and a.reference_reset_probability==1. and a.eval_command_sequence and a.eval_phase=='zero'):p.error('Reference-start diagnostic requires eval-only, reference reset probability1, command sequence, and eval-phase zero (bank phase is retained)')
+if a.skin_observations and a.action_basis:p.error('Skin observations are not supported with an action basis')
 a.run_dir.mkdir(parents=True,exist_ok=True)
 os.environ['MM_MODEL_XML']=str(ROOT/'outputs/isaac_velocity/assets/model.xml')
 os.environ['MM_MATCH_PHYSICS']='1'
@@ -110,6 +112,7 @@ from project_joint_equalities import project_joint_equalities
 from velocity_gait import FootClearance
 from g1_muscle_rewards import G1MuscleRewards, WEIGHTS, TOUCHDOWN_WEIGHT, forward_velocity
 from g1_muscle_sensors import FootContactForces, joint_groups, root_world_velocity
+from developmental_skin import SkinContactSensor
 from g1_muscle_posture import torso_collapsed
 from torch.utils.tensorboard import SummaryWriter
 from rsl_rl.algorithms import PPO
@@ -174,6 +177,7 @@ class VelocityEnv:
         self.ctrl=wp.to_torch(NewtonManager.get_control().mujoco.ctrl).view(n,-1)
         self.feet=FootClearance(self.m,self.d,self.device)
         self.contact_sensor=FootContactForces(self.m,self.s.mjw_model,self.d,self.feet,self.device)
+        self.skin_sensor=SkinContactSensor(self.m,self.s.mjw_model,self.d,self.device) if a.skin_observations else None
         foot_bodies=[int(self.m.geom_bodyid[ids[0]]) for ids,_,_ in self.feet.feet]
         self.foot_bodies=torch.tensor(foot_bodies,device=self.device)
         self.body_positions=wp.to_torch(self.d.xpos)
@@ -304,6 +308,8 @@ class VelocityEnv:
         obs=torch.cat([self.q[:,2:3],gravity,self.q[:,7:]-self.pose_target,
                        self.v[:,:6],self.v[:,6:]*.1,self.act,self.previous,
                        self.command[:,None],torch.sin(self.phase)[:,None],torch.cos(self.phase)[:,None],torch.cos(self.heading_error())[:,None],torch.sin(self.heading_error())[:,None],(self.support_t+self.root_strength)[:,None]],dim=1)
+        if self.skin_sensor is not None:
+            obs=torch.cat((obs,self.skin_sensor.normalized(float(np.sum(REFERENCE.body_mass))*9.81)),dim=1)
         return TensorDict({'policy':torch.nan_to_num(obs).clamp(-20,20)},batch_size=[self.n])
 
     def step(self,action):
@@ -526,7 +532,7 @@ def main():
     with build_simulation_context(sim_cfg=SimulationCfg(dt=.002,device='cuda:0',physics=cfg)) as sim:
         env=VelocityEnv(sim,a.num_envs);obs=env.observation()
         actor_type=PhaseResidualActor if a.phase_harmonics else MLPModel
-        actor_options={'harmonics':a.phase_harmonics} if a.phase_harmonics else {}
+        actor_options={'harmonics':a.phase_harmonics,'skin_features':15 if a.skin_observations else 0} if a.phase_harmonics else {}
         actor=actor_type(obs,{'actor':['policy']},'actor',env.num_actions,**actor_options,hidden_dims=[512,256,256],obs_normalization=True,distribution_cfg={'class_name':'rsl_rl.modules.GaussianDistribution','init_std':.15 if a.action_basis else .5,'std_type':'log','std_range':[.05,1.]}).to('cuda:0')
         critic=MLPModel(obs,{'critic':['policy']},'critic',1,hidden_dims=[512,256,256],obs_normalization=True).to('cuda:0')
         if not a.legacy_support_normalization:
@@ -558,6 +564,8 @@ def main():
                 head=[layer for layer in actor.mlp.modules() if isinstance(layer,torch.nn.Linear)][-1]
                 torch.nn.init.zeros_(head.weight);torch.nn.init.zeros_(head.bias)
         if a.resume:
+            if bool(saved.get('config',{}).get('skin_observations',False)) != a.skin_observations:
+                raise ValueError('Checkpoint and --skin-observations must use the same observation layout')
             if 'action_basis' in saved and not a.action_basis:raise ValueError('Basis checkpoint requires --action-basis')
             if saved.get('reward_version') not in ('g1_muscle_v1','g1_muscle_v2_torso','g1_muscle_v3_movement','g1_muscle_v4_phase_clearance','g1_curriculum_v1','g1_curriculum_v2_reference','g1_curriculum_v3_basis','g1_curriculum_v4_pose','g1_curriculum_v5_root','g1_curriculum_v6_cartesian','g1_curriculum_v7_positive_cartesian'):
                 raise ValueError('Resume requires a G1-lineage checkpoint; old assisted experiment is not used')

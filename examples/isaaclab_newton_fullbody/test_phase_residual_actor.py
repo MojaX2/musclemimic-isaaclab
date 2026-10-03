@@ -46,4 +46,10 @@ class PhaseActorTest(unittest.TestCase):
         torch.testing.assert_close(other(self.obs),self.actor(self.obs),rtol=0,atol=0)
         with self.assertRaises(NotImplementedError):self.actor.as_jit()
 
+    def test_skin_features_preserve_phase_indices(self):
+        raw=torch.cat((self.obs['policy'],torch.ones(8,15)),dim=-1)
+        obs=TensorDict({'policy':raw},batch_size=[8])
+        actor=PhaseResidualActor(obs,{'actor':['policy']},'actor',354,skin_features=15,**self.kw).eval()
+        torch.testing.assert_close(actor.phase_features(raw),self.actor.phase_features(self.obs['policy']))
+
 if __name__=='__main__':unittest.main()

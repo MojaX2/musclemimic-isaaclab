@@ -107,6 +107,8 @@ velocityは0.4–1.2 m/s、停止指令あり、参照リセット50%、Cartesia
 - [終了時の実験結果](RESULTS.md)
 - [Isaac Lab実装の詳細と実験履歴](docs/EXPERIMENT_OVERVIEW.md)
 - [mjlabのモデル読み込み・ランダム駆動・速度測定](validation/mjlab/README.md)
+- [MIMo乳児の筋骨格・皮膚触覚・運動発達実験](docs/DEVELOPMENTAL_HUMAN.md)
+- [乳児ハイハイの最新比較・動画・学習済み重み](docs/INFANT_CRAWL_REACH_CURRICULUM.md)
 
 mjlabは別の検証先です。上記学習・推論コマンドはIsaac Lab＋Newtonを使い、mjlabでのPPO学習を主張するものではありません。
 

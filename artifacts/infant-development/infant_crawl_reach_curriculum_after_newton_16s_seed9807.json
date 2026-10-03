@@ -1,0 +1,1483 @@
+{
+  "scene": "/home/k_miyazawa/Documents/Codex/2026-10-02/https-github-com-mojax2-musclemimic-isaaclab/work/infant_newton_split_anchors_exclude_gap_sparse.xml",
+  "pose": "/home/k_miyazawa/Documents/Codex/2026-10-02/https-github-com-mojax2-musclemimic-isaaclab/outputs/infant_crawl_refined_palm_shin_pose.npz",
+  "checkpoint": "/home/k_miyazawa/Documents/Codex/2026-10-02/https-github-com-mojax2-musclemimic-isaaclab/outputs/infant_crawl_reach_curriculum_16x16s_seed9703.pt",
+  "blend_checkpoint": null,
+  "blend_fraction": 0.0,
+  "stepper_observation_version": 1,
+  "world_features": "tactile_next_contact_v1",
+  "random_tactile_features": false,
+  "tactile_representation": "predicted_contact",
+  "contact_blend": 0.5,
+  "tactile_prediction_horizon_control_steps": 1,
+  "tactile_feature_actions_shuffled": false,
+  "tactile_audit_checkpoint": null,
+  "tactile_transitions": null,
+  "stepper_parameters": "/home/k_miyazawa/Documents/Codex/2026-10-02/https-github-com-mojax2-musclemimic-isaaclab/outputs/infant_crawl_tactile_stepper_ga_8s_seed911.npz",
+  "stepper_parameter_override": null,
+  "stepper_residual_strength": 0.3,
+  "stepper_min_reach_m": 0.03,
+  "max_plant_steps": 8,
+  "stance_brace_strength": 0.0,
+  "alternate_on_abort": false,
+  "backend": "newton",
+  "worlds": 8,
+  "seed": 9807,
+  "direct_match_newton_solver": false,
+  "newton_cone": "elliptic",
+  "newton_multiccd": true,
+  "newton_tolerance": 1e-10,
+  "deterministic": false,
+  "duration_s": 16.0,
+  "initial_pose_sha256": "969c42fb94e8d47803ce2f742cc4cd37ded9ac04b81a15f4239258363a0b6b4f",
+  "initial_diagnostics": {
+    "chest_height_m": 0.20331354439258575,
+    "head_height_m": 0.20889639854431152,
+    "palm_shin_force_n": [
+      11.839483261108398,
+      13.82075309753418,
+      33.115196228027344,
+      57.28023910522461
+    ],
+    "ground_touch_n": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      44.401222229003906,
+      29.308277130126953,
+      0.0,
+      1.3117443323135376,
+      8.546049118041992,
+      33.115196228027344,
+      57.28023910522461,
+      4.051450729370117,
+      4.202534198760986
+    ],
+    "actor_drive_mean": 0.09178752452135086,
+    "geom_center_height_m": {
+      "geom:right_hand1": 0.009874394163489342,
+      "geom:left_hand1": 0.01052506361156702,
+      "geom:right_lower_leg1": 0.031238501891493797,
+      "geom:left_lower_leg1": 0.030829930678009987
+    },
+    "body_center_height_m": {
+      "right_hand": 0.009874394163489342,
+      "left_hand": 0.01052506361156702,
+      "right_lower_leg": 0.03303312510251999,
+      "left_lower_leg": 0.03292173892259598
+    },
+    "geom_local_position_m": {
+      "geom:right_hand1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "geom:left_hand1": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "geom:right_lower_leg1": [
+        0.0,
+        0.0,
+        -0.04399999976158142
+      ],
+      "geom:left_lower_leg1": [
+        0.0,
+        0.0,
+        -0.04399999976158142
+      ]
+    },
+    "body_local_position_m": {
+      "right_hand": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "left_hand": [
+        0.0,
+        0.0,
+        0.0
+      ],
+      "right_lower_arm": [
+        0.0,
+        0.0,
+        0.10759997367858887
+      ],
+      "left_lower_arm": [
+        0.0,
+        0.0,
+        0.10759997367858887
+      ]
+    },
+    "joint_anchor_audit": {
+      "mismatch_count": 0,
+      "max_error_m": 0.0,
+      "largest_mismatches": []
+    },
+    "dynamics_audit": {
+      "dof_armature": {
+        "mismatch_count": 0,
+        "max_absolute_error": 2.2351741811588166e-10
+      },
+      "dof_frictionloss": {
+        "mismatch_count": 0,
+        "max_absolute_error": 2.384185793236071e-09
+      },
+      "dof_damping": {
+        "mismatch_count": 0,
+        "max_absolute_error": 2.026557921475103e-09
+      },
+      "jnt_stiffness": {
+        "mismatch_count": 0,
+        "max_absolute_error": 0.0
+      },
+      "jnt_range": {
+        "mismatch_count": 0,
+        "max_absolute_error": 2.3063477838647373e-07
+      },
+      "qpos_spring": {
+        "mismatch_count": 0,
+        "max_absolute_error": 3.633963352456249e-08
+      },
+      "body_mass_inertia": {
+        "mismatch_count": 0,
+        "largest_mismatches": []
+      }
+    },
+    "geom_parameter_audit": {
+      "source_geom_count": 76,
+      "restored_geom_count": 76,
+      "restored_geom_names_sample": [
+        "MIMo/worldbody/floor_131",
+        "MIMo/worldbody/mimo_location/hip/lb_0",
+        "MIMo/worldbody/mimo_location/hip/lower_body/cb_2",
+        "MIMo/worldbody/mimo_location/hip/lower_body/upper_body/ub2_4",
+        "MIMo/worldbody/mimo_location/hip/lower_body/upper_body/neck_5"
+      ],
+      "matched_named_geoms": 76,
+      "missing_from_restored": [],
+      "differences": {
+        "geom_condim": {
+          "count": 0,
+          "examples": []
+        },
+        "geom_contype": {
+          "count": 0,
+          "examples": []
+        },
+        "geom_conaffinity": {
+          "count": 0,
+          "examples": []
+        },
+        "geom_solref": {
+          "count": 0,
+          "examples": []
+        },
+        "geom_solimp": {
+          "count": 0,
+          "examples": []
+        },
+        "geom_friction": {
+          "count": 0,
+          "examples": []
+        },
+        "geom_size": {
+          "count": 63,
+          "examples": [
+            {
+              "geom": "cb",
+              "source": [
+                0.053,
+                0.035,
+                0.0
+              ],
+              "restored": [
+                0.05299999937415123,
+                0.03500000014901161,
+                0.05299999937415123
+              ]
+            },
+            {
+              "geom": "floor",
+              "source": [
+                0.0,
+                0.0,
+                0.25
+              ],
+              "restored": [
+                5.0,
+                5.0,
+                5.0
+              ]
+            },
+            {
+              "geom": "geom:left_big_toe2",
+              "source": [
+                0.01,
+                0.0075,
+                0.0
+              ],
+              "restored": [
+                0.009999999776482582,
+                0.007499999832361937,
+                0.009999999776482582
+              ]
+            },
+            {
+              "geom": "geom:left_eye1",
+              "source": [
+                0.01125,
+                0.0,
+                0.0
+              ],
+              "restored": [
+                0.011250000447034836,
+                0.011250000447034836,
+                0.011250000447034836
+              ]
+            },
+            {
+              "geom": "geom:left_ffdistal1",
+              "source": [
+                0.005,
+                0.00464,
+                0.0
+              ],
+              "restored": [
+                0.004999999888241291,
+                0.004639999940991402,
+                0.004999999888241291
+              ]
+            },
+            {
+              "geom": "geom:left_ffknuckle1",
+              "source": [
+                0.00549,
+                0.00992,
+                0.0
+              ],
+              "restored": [
+                0.005489999894052744,
+                0.009920000098645687,
+                0.005489999894052744
+              ]
+            },
+            {
+              "geom": "geom:left_ffmiddle1",
+              "source": [
+                0.0052,
+                0.00501,
+                0.0
+              ],
+              "restored": [
+                0.005200000014156103,
+                0.005009999964386225,
+                0.005200000014156103
+              ]
+            },
+            {
+              "geom": "geom:left_foot1",
+              "source": [
+                0.0249,
+                0.0101,
+                0.0
+              ],
+              "restored": [
+                0.024900000542402267,
+                0.010099999606609344,
+                0.024900000542402267
+              ]
+            }
+          ]
+        },
+        "geom_pos": {
+          "count": 0,
+          "examples": []
+        },
+        "geom_quat": {
+          "count": 0,
+          "examples": []
+        },
+        "geom_margin": {
+          "count": 0,
+          "examples": []
+        },
+        "geom_gap": {
+          "count": 0,
+          "examples": []
+        }
+      }
+    },
+    "selected_geom_parameters": {
+      "floor": {
+        "geom_type": {
+          "source": 0,
+          "converted": 0
+        },
+        "geom_size": {
+          "source": [
+            0.0,
+            0.0,
+            0.25
+          ],
+          "converted": [
+            5.0,
+            5.0,
+            5.0
+          ]
+        },
+        "geom_rbound": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_margin": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_gap": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_priority": {
+          "source": 0,
+          "converted": 0
+        },
+        "geom_solmix": {
+          "source": 1.0,
+          "converted": 1.0
+        }
+      },
+      "geom:right_hand1": {
+        "geom_type": {
+          "source": 6,
+          "converted": 6
+        },
+        "geom_size": {
+          "source": [
+            0.01712,
+            0.00584,
+            0.02532
+          ],
+          "converted": [
+            0.01711999997496605,
+            0.005840000230818987,
+            0.02531999908387661
+          ]
+        },
+        "geom_rbound": {
+          "source": 0.031117557744784537,
+          "converted": 0.031117557028891515
+        },
+        "geom_margin": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_gap": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_priority": {
+          "source": 0,
+          "converted": 0
+        },
+        "geom_solmix": {
+          "source": 1.0,
+          "converted": 1.0
+        }
+      },
+      "geom:left_hand1": {
+        "geom_type": {
+          "source": 6,
+          "converted": 6
+        },
+        "geom_size": {
+          "source": [
+            0.01712,
+            0.00584,
+            0.02532
+          ],
+          "converted": [
+            0.01711999997496605,
+            0.005840000230818987,
+            0.02531999908387661
+          ]
+        },
+        "geom_rbound": {
+          "source": 0.031117557744784537,
+          "converted": 0.031117557028891515
+        },
+        "geom_margin": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_gap": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_priority": {
+          "source": 0,
+          "converted": 0
+        },
+        "geom_solmix": {
+          "source": 1.0,
+          "converted": 1.0
+        }
+      },
+      "geom:right_hand2": {
+        "geom_type": {
+          "source": 6,
+          "converted": 6
+        },
+        "geom_size": {
+          "source": [
+            0.00588,
+            0.00584,
+            0.01292
+          ],
+          "converted": [
+            0.005880000069737434,
+            0.005840000230818987,
+            0.012919999659061432
+          ]
+        },
+        "geom_rbound": {
+          "source": 0.015349475561073739,
+          "converted": 0.015349475388632199
+        },
+        "geom_margin": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_gap": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_priority": {
+          "source": 0,
+          "converted": 0
+        },
+        "geom_solmix": {
+          "source": 1.0,
+          "converted": 1.0
+        }
+      },
+      "geom:left_hand2": {
+        "geom_type": {
+          "source": 6,
+          "converted": 6
+        },
+        "geom_size": {
+          "source": [
+            0.00588,
+            0.00584,
+            0.01292
+          ],
+          "converted": [
+            0.005880000069737434,
+            0.005840000230818987,
+            0.012919999659061432
+          ]
+        },
+        "geom_rbound": {
+          "source": 0.015349475561073739,
+          "converted": 0.015349475388632199
+        },
+        "geom_margin": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_gap": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_priority": {
+          "source": 0,
+          "converted": 0
+        },
+        "geom_solmix": {
+          "source": 1.0,
+          "converted": 1.0
+        }
+      },
+      "geom:right_lower_leg1": {
+        "geom_type": {
+          "source": 3,
+          "converted": 3
+        },
+        "geom_size": {
+          "source": [
+            0.029,
+            0.044,
+            0.0
+          ],
+          "converted": [
+            0.028999999165534973,
+            0.04399999976158142,
+            0.028999999165534973
+          ]
+        },
+        "geom_rbound": {
+          "source": 0.073,
+          "converted": 0.0729999989271164
+        },
+        "geom_margin": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_gap": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_priority": {
+          "source": 0,
+          "converted": 0
+        },
+        "geom_solmix": {
+          "source": 1.0,
+          "converted": 1.0
+        }
+      },
+      "geom:left_lower_leg1": {
+        "geom_type": {
+          "source": 3,
+          "converted": 3
+        },
+        "geom_size": {
+          "source": [
+            0.029,
+            0.044,
+            0.0
+          ],
+          "converted": [
+            0.028999999165534973,
+            0.04399999976158142,
+            0.028999999165534973
+          ]
+        },
+        "geom_rbound": {
+          "source": 0.073,
+          "converted": 0.0729999989271164
+        },
+        "geom_margin": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_gap": {
+          "source": 0.0,
+          "converted": 0.0
+        },
+        "geom_priority": {
+          "source": 0,
+          "converted": 0
+        },
+        "geom_solmix": {
+          "source": 1.0,
+          "converted": 1.0
+        }
+      }
+    },
+    "total_mass_kg": {
+      "source": 10.893717800000001,
+      "converted": 10.893717710783903
+    },
+    "solver_options": {
+      "integrator": 3,
+      "cone": 1,
+      "jacobian": 2,
+      "solver": 2,
+      "iterations": 100,
+      "ls_iterations": 40,
+      "disableflags": 0,
+      "enableflags": 0
+    },
+    "wrist_joint_metadata": {
+      "robot:right_hand1": {
+        "qpos_address": 19,
+        "position": [
+          -0.007000000216066837,
+          0.007000000216066837,
+          -0.015320000238716602
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          -1.0
+        ]
+      },
+      "robot:right_hand2": {
+        "qpos_address": 20,
+        "position": [
+          -0.007000000216066837,
+          -0.004999999888241291,
+          -0.020320000126957893
+        ],
+        "axis": [
+          -1.0,
+          0.0,
+          0.0
+        ]
+      },
+      "robot:right_hand3": {
+        "qpos_address": 21,
+        "position": [
+          -0.007000000216066837,
+          0.0,
+          -0.02531999908387661
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      },
+      "robot:left_hand1": {
+        "qpos_address": 48,
+        "position": [
+          -0.007000000216066837,
+          -0.007000000216066837,
+          -0.015320000238716602
+        ],
+        "axis": [
+          0.0,
+          0.0,
+          1.0
+        ]
+      },
+      "robot:left_hand2": {
+        "qpos_address": 49,
+        "position": [
+          -0.007000000216066837,
+          0.004999999888241291,
+          -0.020320000126957893
+        ],
+        "axis": [
+          1.0,
+          0.0,
+          0.0
+        ]
+      },
+      "robot:left_hand3": {
+        "qpos_address": 50,
+        "position": [
+          -0.007000000216066837,
+          0.0,
+          -0.02531999908387661
+        ],
+        "axis": [
+          0.0,
+          1.0,
+          0.0
+        ]
+      }
+    },
+    "ground_contact_counts": [
+      0,
+      0,
+      0,
+      0,
+      3,
+      2,
+      154,
+      120,
+      0,
+      1,
+      2,
+      8,
+      13,
+      67,
+      88
+    ],
+    "ground_contact_details_world0": {
+      "geom:right_hand1": {
+        "candidate_count": 4,
+        "force_positive_count": 1,
+        "normal_force_n": 5.1221113204956055,
+        "minimum_distance_m": -0.009883646853268147,
+        "points": [
+          {
+            "distance_m": -0.0029915606137365103,
+            "position_m": [
+              0.22296345233917236,
+              -0.14252296090126038,
+              -0.0014957803068682551
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.0002778281341306865,
+            "position_m": [
+              0.2484051138162613,
+              -0.16527676582336426,
+              -0.00013891406706534326
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.009883646853268147,
+            "position_m": [
+              0.18992957472801208,
+              -0.18028101325035095,
+              -0.004941823426634073
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 5.1221113204956055
+          },
+          {
+            "distance_m": -0.007169914431869984,
+            "position_m": [
+              0.21537122130393982,
+              -0.20303481817245483,
+              -0.003584957215934992
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          }
+        ]
+      },
+      "geom:left_hand1": {
+        "candidate_count": 1,
+        "force_positive_count": 0,
+        "normal_force_n": 0.0,
+        "minimum_distance_m": -0.001882174052298069,
+        "points": [
+          {
+            "distance_m": -0.001882174052298069,
+            "position_m": [
+              0.18574275076389313,
+              0.19194969534873962,
+              -0.0009410870261490345
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          }
+        ]
+      },
+      "geom:right_hand2": {
+        "candidate_count": 4,
+        "force_positive_count": 1,
+        "normal_force_n": 3.7168569564819336,
+        "minimum_distance_m": -0.007440428249537945,
+        "points": [
+          {
+            "distance_m": -0.003923613112419844,
+            "position_m": [
+              0.21422532200813293,
+              -0.134707972407341,
+              -0.001961806556209922
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.0029915603809058666,
+            "position_m": [
+              0.22296345233917236,
+              -0.14252294600009918,
+              -0.0014957801904529333
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.007440428249537945,
+            "position_m": [
+              0.19736917316913605,
+              -0.1539747267961502,
+              -0.0037202141247689724
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 3.7168569564819336
+          },
+          {
+            "distance_m": -0.0065083750523626804,
+            "position_m": [
+              0.20610730350017548,
+              -0.1617897003889084,
+              -0.0032541875261813402
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          }
+        ]
+      },
+      "geom:left_hand2": {
+        "candidate_count": 3,
+        "force_positive_count": 1,
+        "normal_force_n": 12.515464782714844,
+        "minimum_distance_m": -0.001791554968804121,
+        "points": [
+          {
+            "distance_m": -0.00014325929805636406,
+            "position_m": [
+              0.21126313507556915,
+              0.14669053256511688,
+              -7.162964902818203e-05
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.001791554968804121,
+            "position_m": [
+              0.1938776671886444,
+              0.1657361090183258,
+              -0.0008957774844020605
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 12.515464782714844
+          },
+          {
+            "distance_m": -0.0003002178855240345,
+            "position_m": [
+              0.20242848992347717,
+              0.17367064952850342,
+              -0.00015010894276201725
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          }
+        ]
+      },
+      "geom:right_lfmetacarpal1": {
+        "candidate_count": 4,
+        "force_positive_count": 1,
+        "normal_force_n": 4.206566333770752,
+        "minimum_distance_m": -0.010254401713609695,
+        "points": [
+          {
+            "distance_m": -0.006737587507814169,
+            "position_m": [
+              0.20073427259922028,
+              -0.15011323988437653,
+              -0.0033687937539070845
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.00593234458938241,
+            "position_m": [
+              0.20828355848789215,
+              -0.1568649560213089,
+              -0.002966172294691205
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.010254401713609695,
+            "position_m": [
+              0.1838781237602234,
+              -0.16937999427318573,
+              -0.005127200856804848
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 4.206566333770752
+          },
+          {
+            "distance_m": -0.009449159726500511,
+            "position_m": [
+              0.19142739474773407,
+              -0.1761317104101181,
+              -0.004724579863250256
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          }
+        ]
+      },
+      "geom:left_lfmetacarpal1": {
+        "candidate_count": 4,
+        "force_positive_count": 1,
+        "normal_force_n": 2.91605806350708,
+        "minimum_distance_m": -0.003111334517598152,
+        "points": [
+          {
+            "distance_m": -0.0014630388468503952,
+            "position_m": [
+              0.19734883308410645,
+              0.1619187742471695,
+              -0.0007315194234251976
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.0001746043562889099,
+            "position_m": [
+              0.20473627746105194,
+              0.16877378523349762,
+              -8.730217814445496e-05
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.003111334517598152,
+            "position_m": [
+              0.1799633651971817,
+              0.18096435070037842,
+              -0.001555667258799076
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 2.91605806350708
+          },
+          {
+            "distance_m": -0.0018229000270366669,
+            "position_m": [
+              0.1873508095741272,
+              0.18781936168670654,
+              -0.0009114500135183334
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          }
+        ]
+      },
+      "geom:right_lower_leg1": {
+        "candidate_count": 2,
+        "force_positive_count": 1,
+        "normal_force_n": 93.01093292236328,
+        "minimum_distance_m": -0.006038889288902283,
+        "points": [
+          {
+            "distance_m": -0.0003109276294708252,
+            "position_m": [
+              -0.03091987781226635,
+              -0.056542590260505676,
+              -0.0001554638147354126
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.006038889288902283,
+            "position_m": [
+              -0.11873272061347961,
+              -0.056232184171676636,
+              -0.0030194446444511414
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 93.01093292236328
+          }
+        ]
+      },
+      "geom:left_lower_leg1": {
+        "candidate_count": 2,
+        "force_positive_count": 1,
+        "normal_force_n": 41.68838882446289,
+        "minimum_distance_m": -0.0025234483182430267,
+        "points": [
+          {
+            "distance_m": -0.0007025152444839478,
+            "position_m": [
+              -0.027574962005019188,
+              0.05994672700762749,
+              -0.0003512576222419739
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 0.0
+          },
+          {
+            "distance_m": -0.0025234483182430267,
+            "position_m": [
+              -0.11555107682943344,
+              0.0590050034224987,
+              -0.0012617241591215134
+            ],
+            "normal": [
+              0.0,
+              0.0,
+              1.0
+            ],
+            "solref": [
+              0.004999999888241291,
+              1.0
+            ],
+            "friction": [
+              1.0,
+              1.0,
+              0.004999999888241291,
+              0.00019999999494757503,
+              0.00019999999494757503
+            ],
+            "force_n": 41.68838882446289
+          }
+        ]
+      }
+    }
+  },
+  "mean": {
+    "score": 2.16867733001709,
+    "forward_displacement_m": -0.0033514404203742743,
+    "late_forward_progress_m": 0.015386119484901428,
+    "elevated_fraction": 0.841015636920929,
+    "minimum_support_fraction": 0.8269531726837158,
+    "final_quarter_elevated_fraction": 0.44843751192092896,
+    "final_quarter_support_fraction": 0.44843751192092896,
+    "four_support_fraction": 0.04257812350988388,
+    "guarded_arm_fraction": 0.0,
+    "pelvis_fraction": 0.0,
+    "hand_switches": 0.25,
+    "shin_switches": 3.625,
+    "legacy_crawl_success": 0.0,
+    "crawl_success": 0.0,
+    "step_attempts": 2.5,
+    "swing_unload_events": 0.0,
+    "step_completions": 0.0,
+    "step_aborts": 2.5,
+    "forward_qualified_completions": 0.0,
+    "mean_completed_reach_m": 0.0,
+    "stance_loss_aborts": 1.0,
+    "plant_timeouts": 1.5,
+    "swing_active_fraction": 0.07929687947034836,
+    "tactile_next_contact_brier": 0.0789027065038681,
+    "tactile_persistence_brier": 0.014236114919185638
+  },
+  "per_world": {
+    "forward_displacement_m": [
+      -0.010461007244884968,
+      0.03736601397395134,
+      0.0019198975060135126,
+      -0.011733145453035831,
+      -0.0033502252772450447,
+      0.004295405466109514,
+      -0.011059245094656944,
+      -0.033789217472076416
+    ],
+    "elevated_fraction": [
+      0.956250011920929,
+      0.621874988079071,
+      0.878125011920929,
+      0.8968750238418579,
+      0.8031250238418579,
+      0.7093750238418579,
+      0.862500011920929,
+      1.0
+    ],
+    "minimum_support_fraction": [
+      0.9437500238418579,
+      0.6000000238418579,
+      0.859375,
+      0.8843750357627869,
+      0.793749988079071,
+      0.6937500238418579,
+      0.856249988079071,
+      0.984375
+    ],
+    "final_quarter_support_fraction": [
+      0.824999988079071,
+      0.0,
+      0.512499988079071,
+      0.5875000357627869,
+      0.21250000596046448,
+      0.0,
+      0.45000001788139343,
+      1.0
+    ],
+    "pelvis_fraction": [
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0,
+      0.0
+    ],
+    "hand_switches": [
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0,
+      1.0,
+      0.0,
+      0.0
+    ],
+    "shin_switches": [
+      5.0,
+      4.0,
+      3.0,
+      3.0,
+      6.0,
+      5.0,
+      2.0,
+      1.0
+    ],
+    "legacy_crawl_success": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ],
+    "crawl_success": [
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false,
+      false
+    ]
+  },
+  "crawl_success_count": 0,
+  "solver_limit_steps": 0,
+  "scope": "Crawl criteria are heuristic; isolated success does not establish robust crawling or walking"
+}

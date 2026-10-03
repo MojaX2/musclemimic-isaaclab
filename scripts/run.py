@@ -80,6 +80,7 @@ def main():
     p.add_argument('--eval-interval', type=float, default=3600.)
     p.add_argument('--video-interval', type=float, default=3600.)
     p.add_argument('--no-render', action='store_true')
+    p.add_argument('--skin-observations', action='store_true', help='Use coarse whole-body touch inputs; checkpoint layout must match')
     a = p.parse_args()
     if a.num_envs < 4 or a.num_envs % 4:
         p.error('--num-envs must be a positive multiple of four (one group per evaluation command)')
@@ -123,6 +124,8 @@ def main():
                     '--video-interval', str(a.video_interval), '--eval-at-end']
     if a.no_render:
         command += ['--no-render']
+    if a.skin_observations:
+        command += ['--skin-observations']
     run.mkdir(parents=True, exist_ok=True)
     (run / 'launch.json').write_text(json.dumps({'environment': info, 'command': command}, indent=2) + '\n')
     subprocess.run(command, cwd=ROOT, env={**os.environ, 'PYTHONUNBUFFERED': '1', 'MUJOCO_GL': 'egl'}, check=True)
